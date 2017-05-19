@@ -26,17 +26,43 @@ html
       .abs{position:absolute}
       .fix{position:fixed}
       .flex{display:flex;flex-wrap:wrap}
-      .col{width:33.3%}
+      .col{width:50%}
       .box{margin:10px;padding:10px;min-height:180px}
+      .stuck #menu {position:fixed;top:50px;left:0;right:0;bottom:0;}
       *{outline:1px dotted red;margin:0}
+      @media screen and (min-width:900px){
+        .col{width:33.3%}
+      }
   body
 
-    .max.rel
+    .max.rel(style='xheight:2000px')
       .header.fix.gray(style='top:0;width:100%;height:50px;z-index:2') HEADER
       .middle(style='top:0;padding-top:50px;height:500px;overflow:hidden')
         img(src='//placehold.it/2000/abe')
-      .content.silver(style='z-index:1;height:100%')
+      #menu.content.silver(style='z-index:1;xheight:100%;text-align:center')
+        br
+        br
+        br
+        h1 SOME TEASER TITLE AND SUCH
+        p WITH A FANCY DESCRIPTION AND IMAGES, LOL
+        br
+        br
+        br
+        br
+        br
+        br
+        br
         h3 List stuff here....
+        br
+        br
+        br
+        br
+        br
+        br
+        br
+        br
+        br
+        br
         .flex
           .col
             .box A
@@ -50,3 +76,5 @@ html
             .box A
           .col
             .box A
+
+    script(src='scripts.js')
