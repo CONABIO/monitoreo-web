@@ -40,6 +40,7 @@ html
       each type in ['green', 'grey', 'ligth-blue', 'blue']
 
         .segment(class=type)
+          div(class=type === 'green' ? 'container' : '')
             h1.title.marg.subcolor HTML Ipsum Presents
             p.parr.marg
               strong.subcolor Pellentesque habitant morbi tristique
