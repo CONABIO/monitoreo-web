@@ -35,7 +35,8 @@
     ],
     "pluginOptions": {
       "talavera": {
-        "dest": "images"
+        "dest": "images",
+        "public": "build"
       }
     },
     "bundleOptions": {
