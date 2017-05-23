@@ -1,0 +1,277 @@
+// Place all the styles related to the especies controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+#vista_arbol ul{
+  padding-left: 25px;/* Cambios para NO mostrar el arreglo horizontal, descomentado para no afectar el funcionamiento en bios //ggonzale*/
+  //padding: 0; /* Cambios para mostrar el arreglo horizontal, comentado para no afectar el funcionamiento en bios //ggonzale*/
+}
+
+nested-fields
+.busqueda
+.typeahead,
+.tt-query,
+.tt-hint {
+  width: 396px;
+  height: 30px;
+  padding: 8px 12px;
+  font-size: 24px;
+  line-height: 30px;
+  border: 2px solid #ccc;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  outline: none;
+}
+
+.typeahead:focus {
+  border: 2px solid #0097cf;
+}
+
+.tt-query {
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+.tt-hint {
+  color: #999
+}
+
+.navbar .top-search input:focus {
+  background: none repeat scroll 0 0 #F5F5F5 !important;
+  box-shadow: none;
+}
+
+.leyenda {
+  color: #000000;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#tabla_form, #enlaces_taxonomicos {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.titulo, .pie, #acciones, .menu, .digg_pagination {
+  text-align: center;
+}
+
+.titulo-busqueda {
+  font-size: 20px;
+}
+
+.elimina {
+  text-align: right;
+}
+
+.aniade {
+  text-align: left;
+}
+
+#vista_arbol, #busquedas {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#tabla_editar {
+  display: block;
+  height: 1000px;
+  overflow-y: scroll;
+}
+
+.links_arbol {
+  list-style-type: none;
+}
+
+.fieldset_regiones {background-color:#E8E8E8; border-style: solid;}
+.fieldset_nombres {background-color:#F5F5F5; border-style: solid;}
+.fieldset_bibliografias {background-color:#FFFFFF; border-style: solid;}
+
+//.sub_link_taxon:link {color: #0000ff; text-decoration:none; }
+//.sub_link_taxon:active {color-background: #0000ff; text-decoration: none; }
+//.sub_link_taxon:visited {color: #0000ff; text-decoration: none; }
+//.sub_link_taxon:hover {background-color: #ffffff; text-decoration: none; }
+
+.digg_pagination {
+  background: white;
+  cursor: default;
+  /* self-clearing method: */ }
+.digg_pagination a, .digg_pagination span, .digg_pagination em {
+  padding: 0.2em 0.5em;
+  display: inline-block;
+  margin-right: 1px; }
+.digg_pagination .disabled {
+  color: #999999;
+  border: 1px solid #dddddd; }
+.digg_pagination .current {
+  font-style: normal;
+  font-weight: bold;
+  background: #2e6ab1;
+  color: white;
+  border: 1px solid #2e6ab1; }
+.digg_pagination a {
+  text-decoration: none;
+  color: #105cb6;
+  border: 1px solid #9aafe5; }
+.digg_pagination a:hover, .digg_pagination a:focus {
+  color: #2e6ab1;
+  border-color: #000033; }
+.digg_pagination .page_info {
+  background: #2e6ab1;
+  color: white;
+  padding: 0.4em 0.6em;
+  width: 22em;
+  margin-bottom: 0.3em;
+  text-align: center; }
+.digg_pagination .page_info b {
+  color: #000033;
+  background: #6aa6ed;
+  padding: 0.1em 0.25em; }
+.digg_pagination:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+* html .digg_pagination {
+  height: 1%; }
+*:first-child + html .digg_pagination {
+  overflow: hidden; }
+
+/* Cambios para mostral el arreglo horizontal, comentado para no afectar el funcionamiento en bios //ggonzale
+ul.nodo_mayor{
+display: inline-table;
+margin: 30px 20px;
+padding: 0;
+}
+
+ul.nodo_mayor > ul > .links_arbol a:not(.sub_link_taxon){
+  display: block;
+  text-align: center;
+}
+*/
+
+
+/*
+* Los diferentes tamaños de iconos
+*/
+.icono-redis {
+  width: 50px;
+}
+
+.icono-busqueda_avanzada {
+  width: 75px;
+}
+
+.icono-arbol {
+  width: 50px;
+}
+
+.icono-show_titulo {
+  width: 90px;
+}
+
+#map
+{
+  margin: 0px auto;
+  padding: 0px;
+}
+#map.fullscreen
+{
+  top: 0px;
+  left: 0px;
+  z-index: 10000;
+}
+
+#balloon
+{
+  color: rgb(3, 7, 48);
+  margin: 0px;
+  padding: 0px;
+  font-size: small;
+  line-height: 1em;
+}
+#balloon img{
+  /*padding: 4px;*/
+  /*background-color: #ffffff;*/
+  /*border: 1px solid #dddddd;*/
+  border-radius: 4px;
+  max-width: 100%;
+  height: auto;
+  position: absolute;
+}
+#mapa dt{
+  font-size: 80% !important;
+}
+#balloon dl.dl-horizontal + span {
+  float: right;
+}
+
+.panel-disabled i:before{
+  color: #aaaaaa;
+}
+#panelCaracteristicaDistribucionAmbiente{
+ /* border-width:1px 1px 1px 1px;
+  border-style: solid;
+  border-color: #f3f3f3;*/
+  display: none;
+  position: absolute;
+  z-index: 1001;
+  background-color: rgba(249,249,249,.95);
+  padding: 3em;
+  width: 100%;
+}
+#panelCaracteristicaDistribucionAmbiente div{
+  min-height: 90px;
+}
+.panel-shadow{
+  -webkit-box-shadow: 13px 13px 20px 0px rgba(50, 50, 50, 0.5);
+  -moz-box-shadow:    13px 13px 20px 0px rgba(50, 50, 50, 0.5);
+  box-shadow:         13px 13px 20px 0px rgba(50, 50, 50, 0.5);
+}
+/*los stilos a continuación deben ir en busquedas.css*/
+.bar_reino{
+  background-image: linear-gradient(to bottom, #c8ecff 0%, #ffffff 85%);
+  font-size: 2.2em;
+}
+.bar_animalia{
+  background-image: linear-gradient(to bottom, #ffebd4 0%, #ffffff 85%);
+  font-size: 1.6em;
+}
+.bar_plantae{
+  background-image: linear-gradient(to bottom, #BFDAA8 0%, #ffffff 85%);
+  font-size: 1.6em;
+}
+
+.checkbox label, .radio label{
+  padding-left: 2px;
+}
+.checkbox input, .radio input{
+  display: none;
+  margin: 0 !important;
+}
+.checkbox input:checked + span, .checkbox input + span:hover, .radio input:checked + span, .radio input + span:hover, {
+  padding-left: 6px;
+  margin-right: -1px;
+  color: #333333 !important;
+}
+
+.checkbox i, #panelCaracteristicaDistribucionAmbiente i{
+  font-size: 1.8em;
+}
+.checkbox span{
+  background-image: linear-gradient(to bottom, #eeeeee 0%, #ffffff 80%);
+}
+
+input:checked + .btn-basica, .btn-basica:hover, .btn-basica-activa {
+  background-color: #e0e0e0;
+  border-color: #888888;
+  outline: 0;
+  background-image: none;
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.3);
+}

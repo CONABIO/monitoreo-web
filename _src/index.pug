@@ -17,52 +17,18 @@ html
     title Untitled
     link(rel='stylesheet' href='styles.css')
 
-    style.
-      body,html{height:100%;margin:0}
-      .max{height:100%}
-      .gray{background-color:gray}
-      .silver{background-color:silver}
-      .rel{position:relative}
-      .abs{position:absolute}
-      .fix{position:fixed}
-      .flex{display:flex;flex-wrap:wrap}
-      .col{width:50%}
-      .box{margin:10px;padding:10px;min-height:180px}
-      .stuck #menu {position:fixed;top:50px;left:0;right:0;bottom:0;}
-      *{outline:1px dotted red;margin:0}
-      @media screen and (min-width:900px){
-        .col{width:33.3%}
-      }
   body
 
-    .max.rel(style='xheight:2000px')
-      .header.fix.gray(style='top:0;width:100%;height:50px;z-index:2') HEADER
-      .middle(style='top:0;padding-top:50px;height:500px;overflow:hidden')
-        img(src='//placehold.it/2000/abe')
-      #menu.content.silver(style='z-index:1;xheight:100%;text-align:center')
-        br
-        br
-        br
-        h1 SOME TEASER TITLE AND SUCH
-        p WITH A FANCY DESCRIPTION AND IMAGES, LOL
-        br
-        br
-        br
-        br
-        br
-        br
-        br
-        h3 List stuff here....
-        br
-        br
-        br
-        br
-        br
-        br
-        br
-        br
-        br
-        br
+    .wrapper
+      .header
+        |HEADER
+      
+      .content
+        .cover(style='background-image:url(http://lorempixel.com/1920/1920/)')
+        //-img.cover(src='http://lorempixel.com/1920/1920/')
+      
+      #menu
+   
         .flex
           .col
             .box A
@@ -77,4 +43,33 @@ html
           .col
             .box A
 
+      each type in ['', 'gray', 'blue', 'light-blue']
+
+        .segment(class=type)
+          h1 HTML Ipsum Presents
+          p
+            strong Pellentesque habitant morbi tristique
+            |  senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor     quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. 
+            em Aenean ultricies mi vitae est.
+            |  Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, 
+            code commodo vitae
+            | , ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. 
+            a(href='#') Donec non enim
+            |  in turpis pulvinar facilisis. Ut felis.
+          h2 Header Level 2
+          ol
+            li Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+            li Aliquam tincidunt mauris eu risus.
+          blockquote
+            p
+              | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam.          Vivamus pretium ornare est.
+          h3 Header Level 3
+          ul
+            li Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+            li Aliquam tincidunt mauris eu risus.
+   
+
+       
     script(src='scripts.js')
+
+

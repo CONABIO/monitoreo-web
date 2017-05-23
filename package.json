@@ -58,6 +58,7 @@
     "buble": "^0.15.2",
     "less": "^2.7.2",
     "less-plugin-autoprefix": "^1.5.1",
+    "node-sass": "^4.5.3",
     "pug": "^2.0.0-rc.1",
     "rollup": "^0.41.6",
     "talavera": "^0.2.2",
