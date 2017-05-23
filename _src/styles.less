@@ -1,6 +1,8 @@
 body, html {
 	height: 100%;
 	margin: 0;
+	font-family: opensans, "Helvetica", Arial;
+	color: #d5e3e6;
 }
 
 * {
@@ -28,9 +30,6 @@ body, html {
 	z-index: 2;
 }
 
-
-// general
-
 .content {
 	top: 0;
 	padding-top: 50px;
@@ -47,6 +46,21 @@ body, html {
 	height: 100%;
 }
 
+#menu {
+	z-index: 1;
+	text-align: center;
+	background-color: white;
+}
+
+.stuck #menu {
+	position: fixed;
+	top: 50px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+
 .flex {
 	display: flex;
 	flex-wrap: wrap;
@@ -56,32 +70,122 @@ body, html {
 	width: 50%; 
 }
 
+.marg {
+	margin: 10px;
+}
+
 .box {
-	margin:10px;
-	padding:10px;
-	min-height: 180px;
-}
+	margin: 10px;
+	padding: 10px;
 
-#menu {
-	z-index: 1;
-	text-align: center;
-	background-color: white;
-}
+	.banner {
+		max-width: 100%;
+	}
 
-.stuck #menu {
-	position:fixed;
-	top:50px;
-	left:0;
-	right:0;
-	bottom:0;
+	.caption {
+		color: #505f2e;
+	}
+
+	.body {
+		color: #444444;
+	}
 }
 
 .segment {
-	background-color: white;
+	padding: 10%;
 
-	&.gray {
-		background-color: gray;
+	.title {
+		font-size: 30px;
+		font-weight: 500;
+		line-height: 130%;
 	}
+
+
+	&.green {
+		background-color: #829E3D;
+
+		.parr {
+
+			font-size: 16px;
+
+		}
+
+		.subcolor {
+			color: #FFCC00;
+
+		}
+
+		.link {
+			color: #104C5B;
+			text-decoration: none;
+		}
+
+		.link:hover {
+			text-decoration: underline;
+		}
+	}
+
+	&.grey {
+		background-color: #3D3D3D;
+
+		.subcolor, .link {
+			color: #FFCC00;
+		}
+
+		.ltwo {
+			text-decoration: none;
+		}
+
+		.ltwo:hover {
+			text-decoration: underline;
+		}
+	}
+
+	&.ligth-blue {
+		background-color: #4e91a2;
+
+		.subcolor, .link {
+			color: #60332F;
+		}
+
+		.link {
+			text-decoration: none;
+		}
+
+		.link:hover {
+			text-decoration:underline;
+		}
+	}	
+
+	&.blue {
+		background-color: #104C5B;
+
+		.subcolor {
+			color: #829E3D;
+		}
+
+		.link {
+			text-decoration: none;
+			color: #d5e3e6;	
+		}
+
+		.link:hover {
+			text-decoration: underline;
+			color: #829E3D;
+		}
+	}
+	
+}
+
+.footer {
+	background-color: #3D3D3D;
+	padding: 5%;
+	text-align: center;
+
+	.link {
+		color: #d5e3e6;
+	}
+
 }
 
 @media screen and (min-width: 900px) {
