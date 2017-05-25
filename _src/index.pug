@@ -1,3 +1,8 @@
+//-
+  ---
+  site: !include data.yml
+  ---
+
 doctype html
 html
   head
@@ -19,10 +24,9 @@ html
     link(rel='stylesheet' href='images/sprites.css')
 
   body
-
     .wrapper
       .header
-        i.x-logoConabioCorreo
+        img(src='images/lconabio_25.svg' width=200)
       
       .content
         .cover(style='background-image:url(http://lorempixel.com/1920/1920/)')
@@ -50,7 +54,15 @@ html
               a.link(href='#') Donec non enim
               |  in turpis pulvinar facilisis. Ut felis.
               a.ltwo.link(href='#') Donec non enim 
-      
+        
+      .segment.blank.debug
+        .flex
+          each x in site.logos
+            .col2
+              .box
+                img.banner(src='images/' + x.img)
+
+
       .footer 
         p Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
         a.link(href='#') Donec non enim
