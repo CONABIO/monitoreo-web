@@ -25,27 +25,29 @@ html
 
   body
     .wrapper
-      .header
-        img(src='images/lconabio_25.svg' width=200)
+      .segment.header
+        .container
+          img(src='images/lconabio_25.svg' width=200)
       
       .content
         .cover(style='background-image:url(http://lorempixel.com/1920/1920/)')
         //-img.cover(src='http://lorempixel.com/1920/1920/')
       
       #menu
-   
-        .flex
-          each x in new Array(6)
-            .col
-              .box 
-                img.banner(src="http://lorempixel.com/400/200/cats/")
-                h4.marg.caption Lorem Ipsum
-                p.marg.body Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+        
+        .segment.padded
+          .flex.container
+            each x in new Array(6)
+              .col
+                .box 
+                  img.banner(src="http://lorempixel.com/400/200/cats/")
+                  h4.marg.caption Lorem Ipsum
+                  p.marg.body Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
 
       each type in ['green', 'grey', 'ligth-blue', 'blue']
 
-        .segment(class=type)
-          div(class=type === 'green' ? 'container' : '')
+        .segment.padded(class=type)
+          .container(class=type === 'green' ? '' : '')
             h1.title.marg.subcolor HTML Ipsum Presents
             p.parr.marg
               strong.subcolor Pellentesque habitant morbi tristique
@@ -56,7 +58,7 @@ html
               a.ltwo.link(href='#') Donec non enim 
         
       .segment.blank.debug
-        .flex
+        .container.flex
           each x in site.logos
             .col2
               .box
