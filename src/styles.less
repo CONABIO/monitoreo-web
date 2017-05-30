@@ -13,6 +13,10 @@ body, html {
 	outline:1px dotted red;
 }
 
+.debug2 {
+	outline:1px dotted blue;
+}
+
 .wrapper {
 	height: 100%;
 	position: relative;
@@ -26,7 +30,6 @@ body, html {
 	box-sizing: border-box;
 	display: block;
 	width: 100%;
-	height: 200px;
 	z-index: 2;
 }
 
@@ -64,10 +67,15 @@ body, html {
 .flex {
 	display: flex;
 	flex-wrap: wrap;
+	align-items: center;
 }
 
 .col { 
 	width: 50%; 
+}
+
+.col2 {
+	width: 100% / 3;
 }
 
 .marg {
@@ -77,9 +85,11 @@ body, html {
 .box {
 	margin: 10px;
 	padding: 10px;
+	text-align: center;
 
 	.banner {
 		max-width: 100%;
+		max-height: 180px; 
 	}
 
 	.caption {
@@ -89,14 +99,21 @@ body, html {
 	.body {
 		color: #444444;
 	}
+
 }
 
 .segment {
-	padding: 10%;
+	&.padded {
+		padding: 10% 2%;
+	}
 
 	.container {
-		width: 50%;
+		max-width: 1200px;
 		margin: auto;
+
+		&.padded {
+			padding: 2%;
+		}
 	}
 
 	.title {
@@ -160,7 +177,7 @@ body, html {
 		.link:hover {
 			text-decoration:underline;
 		}
-	}	
+	}
 
 	&.blue {
 		background-color: #104C5B;
@@ -179,9 +196,13 @@ body, html {
 			color: #829E3D;
 		}
 	}
-	
+
 }
 
+.blank {
+	background-color: white;
+	padding: 20px;
+}
 
 .footer {
 	background-color: #3D3D3D;
@@ -197,5 +218,9 @@ body, html {
 @media screen and (min-width: 900px) {
 	.col {
 		width: 33.3%;
+	}
+
+	.col2 {
+		width: 100% / 6;
 	}
 }
