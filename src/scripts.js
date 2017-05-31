@@ -1,5 +1,6 @@
 $iframe = document.querySelector('.js-canvas iframe');
 $close = document.querySelector('.js-close');
+$head = document.querySelector('.header');
 $body = document.body;
 
 let isOpen;
@@ -45,3 +46,17 @@ window.addEventListener('keyup', e => {
     close();
   }
 });
+
+function check() {
+  const max = 550;
+  const my = Math.max(window.scrollY, 400);
+  const p = (Math.min(max, my) / max) * 100;
+
+  $head.style.backgroundColor = `rgba(60, 60, 60, ${p / 100})`;
+}
+
+window.addEventListener('scroll', () => {
+  check();
+});
+
+check();
