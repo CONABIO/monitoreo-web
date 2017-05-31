@@ -242,28 +242,6 @@ body, html {
     background-color: rgba(2, 2, 2, .5);
   }
 
-  &.active {
-    transform: translateY(0);
-
-    &:before {
-      opacity: 1;
-    }
-
-    > .js-canvas {
-      transform: translateY(0);
-    }
-  }
-
-  &.display {
-    > .js-canvas {
-      background-image: none;
-
-      h3 {
-        opacity: 1;
-      }
-    }
-  }
-
   > .js-canvas {
     transform: translateY(100%);
     position: absolute;
@@ -303,9 +281,32 @@ body, html {
 }
 
 .js-close {
+  visibility: hidden;
   text-decoration: none;
   text-align: center;
   color: white;
+}
+
+body {
+  &.blocked {
+    overflow: hidden;
+
+    .js-target {
+      transform: translateY(0);
+
+      &:before {
+        opacity: 1;
+      }
+
+      > .js-canvas {
+        transform: translateY(0);
+      }
+    }
+
+    .js-close {
+      visibility: visible;
+    }
+  }
 }
 
 .md-show {
