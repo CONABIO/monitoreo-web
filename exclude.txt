@@ -1,0 +1,16 @@
+.git
+.env
+.tarima
+.eslintrc
+.gitignore
+
+exclude.txt
+package.json
+README.md
+yarn.lock
+
+src
+bin
+bak
+node_modules
+bower_components
