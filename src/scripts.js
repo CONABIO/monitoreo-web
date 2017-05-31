@@ -18,7 +18,17 @@ let isOpen;
       }, 300);
     };
 
+    document.body.style.overflow = 'hidden';
+
     isOpen = true;
+  });
+});
+
+[].slice.call(document.querySelectorAll('a.js-close'))
+.forEach(node => {
+  node.addEventListener('click', e => {
+    e.preventDefault();
+    close();
   });
 });
 
@@ -31,6 +41,8 @@ function close() {
       $target.classList.remove('active');
       $iframe.src = 'about:blank';
     }, 100);
+
+    document.body.style.overflow = '';
 
     isOpen = false;
   }
