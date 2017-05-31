@@ -20,14 +20,14 @@ body, html {
 .wrapper {
 	height: 100%;
 	position: relative;
-} 
+}
 
 .header {
 	background-color: rgba(51, 51, 51, 0.75);
 	margin-right: auto;
 	margin-left: auto;
 	padding: 0px 10px;
-	box-sizing: border-box;
+  box-sizing: border-box;
 	display: block;
 	width: 100%;
 	z-index: 2;
@@ -70,8 +70,8 @@ body, html {
 	align-items: center;
 }
 
-.col { 
-	width: 50%; 
+.col {
+	width: 50%;
 }
 
 .col2 {
@@ -89,7 +89,7 @@ body, html {
 
 	.banner {
 		max-width: 100%;
-		max-height: 180px; 
+		max-height: 180px;
 	}
 
 	.caption {
@@ -188,7 +188,7 @@ body, html {
 
 		.link {
 			text-decoration: none;
-			color: #d5e3e6;	
+			color: #d5e3e6;
 		}
 
 		.link:hover {
@@ -215,9 +215,106 @@ body, html {
 
 }
 
+.js-target {
+  position: fixed;
+  bottom: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: 1s;
+  transform: translateY(100%);
+
+  &:before {
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: ' ';
+    transition: .6s;
+    position: absolute;
+    background-color: rgba(2, 2, 2, .5);
+  }
+
+  &.active {
+    transform: translateY(0);
+
+    &:before {
+      opacity: 1;
+    }
+
+    > .js-canvas {
+      transform: translateY(0);
+    }
+  }
+
+  &.display {
+    > .js-canvas {
+      background-image: none;
+
+      h3 {
+        opacity: 1;
+      }
+    }
+  }
+
+  > .js-canvas {
+    transform: translateY(100%);
+    position: absolute;
+    transition: .5s;
+    height: 75%;
+    width: 90%;
+    margin: auto;
+    top: 50px;
+    left: 0;
+    right: 0;
+    bottom: auto;
+  }
+
+  h3 {
+    opacity: 0;
+    transition: .3s;
+    position: relative;
+    text-align: center;
+    transform: translateY(-10px);
+
+    span {
+      border: 2px solid rgba(255, 255, 255, .5);
+      background-color: rgba(0, 0, 0, .5);
+      display: inline-block;
+      text-align: center;
+      margin: auto;
+      padding: .3em 1em;
+      border-radius: 30px;
+    }
+  }
+
+  img {
+    opacity: .5;
+    float: right;
+  }
+
+  iframe {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: .5s;
+    visibility: hidden;
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .5);
+
+    &.active {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+
 @media screen and (min-width: 900px) {
 	.col {
-		width: 33.3%;
+		width: 33.3%
+
 	}
 
 	.col2 {

@@ -37,7 +37,16 @@ html
 
         .segment.padded
           .flex.container
-            each x in new Array(6)
+            .col
+              .box
+                a.
+                img.banner(src="http://lorempixel.com/400/200/cats/")
+                h4.marg.caption
+                  a.js-frame(href='http://snmbserve.conabio.gob.mx/app/' target='_blank' style='text-decoration:none')
+                    |http://snmbserve.conabio.gob.mx/app/
+                p.marg.body Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+
+            each x in new Array(5)
               .col
                 .box
                   img.banner(src="http://lorempixel.com/400/200/cats/")
@@ -69,6 +78,10 @@ html
         p Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
         a.link(href='#') Donec non enim
 
+      .js-target
+        .js-canvas
+          h3: span TITLE HERE
+          iframe(src='about:blank' frameborder=0)
+          img(src='images/lconabio_25.svg' width=200)
+
     script(src='scripts.js')
-
-
