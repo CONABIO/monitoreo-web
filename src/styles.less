@@ -27,6 +27,7 @@ body, html {
 	margin-right: auto;
 	margin-left: auto;
 	padding: 0px 10px;
+  position: fixed;
   box-sizing: border-box;
 	display: block;
 	width: 100%;
@@ -269,10 +270,10 @@ body, html {
     transition: .5s;
     width: 100%;
     margin: auto;
-    top: 0;
+    top: 100px;
     left: 0;
     right: 0;
-    bottom: 100px;
+    bottom: 0;
 
     .cell {
       padding: 10px;
@@ -283,12 +284,6 @@ body, html {
         overflow: hidden;
         max-width: 100%;
       }
-    }
-
-    .js-close {
-      text-decoration: none;
-      text-align: center;
-      color: white;
     }
   }
 
@@ -305,6 +300,12 @@ body, html {
       opacity: 1;
     }
   }
+}
+
+.js-close {
+  text-decoration: none;
+  text-align: center;
+  color: white;
 }
 
 .md-show {

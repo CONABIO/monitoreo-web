@@ -26,8 +26,27 @@ html
   body
     .wrapper
       .segment.header
-        .container.padded
-          img(src='images/lconabio_25.svg' width=200)
+        .container
+          //- img(src='images/lconabio_25.svg' width=200)
+
+          nav.flex(style='min-height:100px')
+            .cell.md-show
+              img(src='images/lconabio_25.svg' height=80)
+            .cell
+              .flex
+                .cell
+                  h4 Site A
+                  p.sm-hide Short description
+                .cell
+                  h4 Site B
+                  p.sm-hide Short description
+                .cell
+                  h4 Site C
+                  p.sm-hide Short description
+                .cell
+                  h4 Site D
+                  p.sm-hide Short description
+            a.cell.js-close(href='#') &times;
 
       .content
         .cover(style='background-image:url(http://lorempixel.com/1920/1920/animals/)')
@@ -80,24 +99,6 @@ html
 
       .js-target
         .js-canvas
-          nav.flex(style='min-height:100px')
-            .cell.md-show
-              img(src='images/lconabio_25.svg' height=80)
-            .cell
-              .flex
-                .cell
-                  h4 Site A
-                  p.sm-hide Short description
-                .cell
-                  h4 Site B
-                  p.sm-hide Short description
-                .cell
-                  h4 Site C
-                  p.sm-hide Short description
-                .cell
-                  h4 Site D
-                  p.sm-hide Short description
-            a.cell.js-close(href='#') &times;
           iframe(src='about:blank' frameborder=0)
 
     script(src='scripts.js')
