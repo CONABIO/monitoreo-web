@@ -3,7 +3,7 @@ body, html {
 	height: 100%;
 	margin: 0;
 	font-family: opensans, "Helvetica", Arial;
-	color: #d5e3e6;
+	color: @gray;
 }
 
 * {
@@ -16,10 +16,10 @@ body, html {
 }
 
 .header {
-	background-color: rgba(51, 51, 51, 0.75);
+	//background-color: rgba(51, 51, 51, 0.75);
 	margin-right: auto;
 	margin-left: auto;
-	padding: 0px 10px;
+	padding: 0px @m-one;
   	position: fixed;
   	box-sizing: border-box;
 	display: block;
@@ -29,7 +29,6 @@ body, html {
 
 .content {
 	top: 0;
-	padding-top: 50px;
 	height: 500px;
 	overflow: hidden;
 }
@@ -46,109 +45,91 @@ body, html {
 #menu {
 	z-index: 1;
 	text-align: center;
-	background-color: white;
-}
-
-.stuck #menu {
-	position: fixed;
-	top: 50px;
-	left: 0;
-	right: 0;
-	bottom: 0;
+	background-color: @white;
 }
 
 .segment {
 	&.padded {
-		padding: 10% 2%;
+		padding: @pad-y @pad-x;
 	}
 
 	.container {
-		max-width: 1200px;
+		max-width: @mx-width;
 		margin: auto;
 
 		&.padded {
-			padding: 2%;
+			padding: @pad-x;
 		}
 	}
 
 	.title {
-		font-size: 30px;
+		font-size: @title-size;
 		font-weight: 500;
 		line-height: 130%;
 	}
 
+	.link {
+		text-decoration: none;
+	}
+
+	.link:hover {
+		text-decoration:underline;
+	}
+
+	.parr {
+		font-size: @text-size;
+	}
 
 	&.green {
-		background-color: #829E3D;
-
-		.parr {
-
-			font-size: 16px;
-
-		}
+		background-color: @green;
 
 		.subcolor {
-			color: #FFCC00;
+			color: @yellow;
 
 		}
 
 		.link {
-			color: #104C5B;
-			text-decoration: none;
-		}
-
-		.link:hover {
-			text-decoration: underline;
+			color: @dark-cyan;
 		}
 	}
 
 	&.grey {
-		background-color: #3D3D3D;
+		background-color: @black;
 
 		.subcolor, .link {
-			color: #FFCC00;
+			color: @yellow;
 		}
 
-		.ltwo {
+		.secundary {
 			text-decoration: none;
 		}
 
-		.ltwo:hover {
+		.secundary:hover {
 			text-decoration: underline;
 		}
 	}
 
-	&.ligth-blue {
-		background-color: #4e91a2;
+	&.light-blue {
+		background-color: @moderate-cyan;
 
 		.subcolor, .link {
-			color: #60332F;
-		}
-
-		.link {
-			text-decoration: none;
-		}
-
-		.link:hover {
-			text-decoration:underline;
+			color: @dark-red;
 		}
 	}
 
 	&.blue {
-		background-color: #104C5B;
+		background-color: @dark-cyan;
 
 		.subcolor {
-			color: #829E3D;
+			color: @green;
 		}
 
 		.link {
-			text-decoration: none;
-			color: #d5e3e6;
+			color: @gray;
 		}
 
 		.link:hover {
-			text-decoration: underline;
-			color: #829E3D;
+			color: @green;
 		}
 	}
 
@@ -156,17 +137,17 @@ body, html {
 
 
 .blank {
-	background-color: white;
+	background-color: @white;
 	padding: 20px;
 }
 
 .footer {
-	background-color: #3D3D3D;
+	background-color: @black;
 	padding: 5%;
 	text-align: center;
 
 	.link {
-		color: #d5e3e6;
+		color: @gray;
 	}
 
 }
