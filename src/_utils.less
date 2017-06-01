@@ -1,0 +1,101 @@
+
+.debug {
+  outline:1px dotted red;
+}
+
+.debug2 {
+  outline:1px dotted blue;
+}
+
+.marg {
+  margin: 10px;
+}
+
+.js-target {
+  position: fixed;
+  bottom: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: 1s;
+  transform: translateY(100%);
+
+  &:before {
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: ' ';
+    transition: .6s;
+    position: absolute;
+    background-color: rgba(2, 2, 2, .5);
+  }
+
+  > .js-canvas {
+    transform: translateY(100%);
+    position: absolute;
+    transition: .5s;
+    width: 100%;
+    margin: auto;
+    top: 100px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    .cell {
+      padding: 10px;
+
+      p {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        max-width: 100%;
+      }
+    }
+  }
+
+  iframe {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: .5s;
+    visibility: hidden;
+    position: relative;
+
+    &.active {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+
+.js-close {
+  visibility: hidden;
+  text-decoration: none;
+  text-align: center;
+  color: white;
+}
+
+body {
+  &.blocked {
+    overflow: hidden;
+
+    .js-target {
+      transform: translateY(0);
+
+      &:before {
+        opacity: 1;
+      }
+
+      > .js-canvas {
+        transform: translateY(0);
+      }
+    }
+
+    .js-close {
+      visibility: visible;
+    }
+  }
+}

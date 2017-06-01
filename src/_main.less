@@ -1,0 +1,172 @@
+
+body, html {
+	height: 100%;
+	margin: 0;
+	font-family: opensans, "Helvetica", Arial;
+	color: #d5e3e6;
+}
+
+* {
+	margin: 0;
+}
+
+.wrapper {
+	height: 100%;
+	position: relative;
+}
+
+.header {
+	background-color: rgba(51, 51, 51, 0.75);
+	margin-right: auto;
+	margin-left: auto;
+	padding: 0px 10px;
+  	position: fixed;
+  	box-sizing: border-box;
+	display: block;
+	width: 100%;
+	z-index: 2;
+}
+
+.content {
+	top: 0;
+	padding-top: 50px;
+	height: 500px;
+	overflow: hidden;
+}
+
+.cover {
+	background-size: cover;
+	position: fixed;
+	z-index: -1;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+
+#menu {
+	z-index: 1;
+	text-align: center;
+	background-color: white;
+}
+
+.stuck #menu {
+	position: fixed;
+	top: 50px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.segment {
+	&.padded {
+		padding: 10% 2%;
+	}
+
+	.container {
+		max-width: 1200px;
+		margin: auto;
+
+		&.padded {
+			padding: 2%;
+		}
+	}
+
+	.title {
+		font-size: 30px;
+		font-weight: 500;
+		line-height: 130%;
+	}
+
+
+	&.green {
+		background-color: #829E3D;
+
+		.parr {
+
+			font-size: 16px;
+
+		}
+
+		.subcolor {
+			color: #FFCC00;
+
+		}
+
+		.link {
+			color: #104C5B;
+			text-decoration: none;
+		}
+
+		.link:hover {
+			text-decoration: underline;
+		}
+	}
+
+	&.grey {
+		background-color: #3D3D3D;
+
+		.subcolor, .link {
+			color: #FFCC00;
+		}
+
+		.ltwo {
+			text-decoration: none;
+		}
+
+		.ltwo:hover {
+			text-decoration: underline;
+		}
+	}
+
+	&.ligth-blue {
+		background-color: #4e91a2;
+
+		.subcolor, .link {
+			color: #60332F;
+		}
+
+		.link {
+			text-decoration: none;
+		}
+
+		.link:hover {
+			text-decoration:underline;
+		}
+	}
+
+	&.blue {
+		background-color: #104C5B;
+
+		.subcolor {
+			color: #829E3D;
+		}
+
+		.link {
+			text-decoration: none;
+			color: #d5e3e6;
+		}
+
+		.link:hover {
+			text-decoration: underline;
+			color: #829E3D;
+		}
+	}
+
+}
+
+
+.blank {
+	background-color: white;
+	padding: 20px;
+}
+
+.footer {
+	background-color: #3D3D3D;
+	padding: 5%;
+	text-align: center;
+
+	.link {
+		color: #d5e3e6;
+	}
+
+}
