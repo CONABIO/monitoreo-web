@@ -2,13 +2,44 @@
 	background-color: @base-color;
 	font-family: opensans, "Helvetica", Arial;
 	color: @gray-dark;
+
+}
+
+.helptab {
+	xbackground-color: @very-light-gray;
+	xbackground-color: blue;
+
+}
+
+.tabs {
+	padding-left: 0;
+	display: block;
+
+}
+
+tabs:active {
+	xcursor: pointer;
+	color: maroon;
+	background-color: @very-light-gray;
+	border-bottom: 1px solid transparent;
 }
 
 .tab {
-	background-color: @very-light-gray;
+	background-color: transparent;
+	border: 1px solid @gray-medium;
+	display: inline-block;
+}
 
-} 
+tab:active {
+	border-top: 1px solid transparent;
+}
 
-.contbody {
-	background-color: pink;
+.tab-bodies {
+	background: violet;
+	border: 1px solid @gray-medium;
+	border-top: 1px solid transparent;
+}
+
+.tab-body {
+	clear: both;
 }
