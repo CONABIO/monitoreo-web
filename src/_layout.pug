@@ -28,9 +28,10 @@ html
             .cell.col-60.md-show
               .flex
                 each x in site.sections
-                  a.cell.col-25(href='#')
-                    h4= x.name
-                    p.lg-show= x.description
+                  .item.cell.col-25
+                    a(href='#')
+                      h4= x.name
+                      p.lg-show= x.description
             .cell.is-opened
               a.btn.has-symbol.js-close(href='#')
                 span.symbol ×
@@ -65,7 +66,13 @@ html
         a.link(href='#') Donec non enim
 
       .js-target
-        .js-canvas
+        .js-canvas.is-submenu
+          ul.reset
+            each x in site.sections
+              li.item: a.js-open(href=x.url target='_blank' data-is='embed')
+                h4= x.name
+                p= x.description
+        .js-canvas.is-iframe
           iframe(src='about:blank' frameborder=0)
 
-    script(src='scripts.js')
+  script(src='scripts.js')

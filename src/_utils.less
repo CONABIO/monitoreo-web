@@ -7,6 +7,11 @@
   outline:1px dotted blue;
 }
 
+.reset {
+  list-style: none;
+  padding: 0;
+}
+
 .marg {
   margin: @m-one;
 }
@@ -73,6 +78,11 @@
   }
 }
 
+.js-canvas.is-submenu,
+.js-canvas.is-iframe {
+  display: none;
+}
+
 .has-symbol {
   text-decoration: none;
   line-height: 1.2em;
@@ -99,17 +109,26 @@ body {
       &:before {
         opacity: 1;
       }
-    }
 
-    &.embed {
-      .js-target > .js-canvas {
+      > .js-canvas {
         transform: translateY(0);
       }
     }
 
-    &.menu {
-      .js-target  {
-        // FIXME: handle menu behavior
+    &.embed .js-target > .js-canvas.is-iframe,
+    &.menu .js-target > .js-canvas.is-submenu {
+      display: block;
+    }
+
+    @media screen and (min-width: 720px) {
+      &.menu {
+        .js-target {
+          transform: translateY(100%);
+        }
+
+        .header .js-close {
+          visibility: hidden;
+        }
       }
     }
 

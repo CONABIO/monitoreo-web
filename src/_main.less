@@ -31,21 +31,7 @@ body, html {
   }
 
   .col-25 {
-    padding: @m-one;
     min-height: 75px;
-
-    &:hover {
-      background-color: rgba(255, 255, 255, .1);
-    }
-  }
-
-  a {
-    color: rgba(255, 255, 255, .7);
-    text-decoration: none;
-
-    h4 {
-      color: @white;
-    }
   }
 
   @media screen and (max-width: 959px) {
@@ -69,6 +55,23 @@ body, html {
 	top: 0;
 	width: 100%;
 	height: 100%;
+}
+
+.item {
+  padding: @m-one;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, .1);
+  }
+
+  a {
+    color: rgba(255, 255, 255, .7);
+    text-decoration: none;
+
+    h4 {
+      color: @white;
+    }
+  }
 }
 
 #menu {

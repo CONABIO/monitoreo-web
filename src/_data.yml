@@ -10,6 +10,7 @@ logos:
 
 sections:
 - name: Geoportal
+  url: http://snmbserve.conabio.gob.mx/app
   description: Ullamco mollit labore id tempor.
 - name: SNMB
   description: Ut incididunt ex pariatur in lol.

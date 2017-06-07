@@ -1,23 +1,24 @@
-$iframe = document.querySelector('.js-canvas iframe');
-$close = document.querySelector('.js-close');
-$head = document.querySelector('.header');
-$body = document.body;
+const $iframe = document.querySelector('.js-canvas iframe');
+const $close = document.querySelector('.js-close');
+const $head = document.querySelector('.header');
+const $body = document.body;
+
+const elements = [];
 
 let isOpen;
-let element;
 
 [].slice.call(document.querySelectorAll('a.js-open'))
 .forEach(node => {
   node.addEventListener('click', e => {
     e.preventDefault();
 
-    element = e.currentTarget;
+    elements.push(e.currentTarget);
 
     $body.classList.add('blocked');
-    $body.classList.add(element.dataset.is);
+    $body.classList.add(e.currentTarget.dataset.is);
 
-    if (element.dataset.is === 'embed') {
-      $iframe.src = element.href;
+    if (e.currentTarget.dataset.is === 'embed') {
+      $iframe.src = e.currentTarget.href;
       $iframe.onload = () => {
         setTimeout(() => {
           $iframe.classList.add('active');
@@ -36,7 +37,8 @@ $close.addEventListener('click', e => {
 
 function close() {
   if (isOpen) {
-    $body.classList.remove('blocked');
+    const element = elements.pop();
+
     $body.classList.remove(element.dataset.is);
 
     if (element.dataset.is === 'embed') {
@@ -46,8 +48,10 @@ function close() {
       }, 100);
     }
 
-    isOpen = false;
-    element = null;
+    if (!elements.length) {
+      $body.classList.remove('blocked');
+      isOpen = false;
+    }
   }
 }
 
