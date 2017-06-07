@@ -4,20 +4,26 @@ $head = document.querySelector('.header');
 $body = document.body;
 
 let isOpen;
+let element;
 
-[].slice.call(document.querySelectorAll('a.js-frame'))
+[].slice.call(document.querySelectorAll('a.js-open'))
 .forEach(node => {
   node.addEventListener('click', e => {
     e.preventDefault();
 
-    $body.classList.add('blocked');
+    element = e.currentTarget;
 
-    $iframe.src = e.currentTarget.href;
-    $iframe.onload = () => {
-      setTimeout(() => {
-        $iframe.classList.add('active');
-      }, 300);
-    };
+    $body.classList.add('blocked');
+    $body.classList.add(element.dataset.is);
+
+    if (element.dataset.is === 'embed') {
+      $iframe.src = element.href;
+      $iframe.onload = () => {
+        setTimeout(() => {
+          $iframe.classList.add('active');
+        }, 300);
+      };
+    }
 
     isOpen = true;
   });
@@ -31,13 +37,17 @@ $close.addEventListener('click', e => {
 function close() {
   if (isOpen) {
     $body.classList.remove('blocked');
+    $body.classList.remove(element.dataset.is);
 
-    setTimeout(() => {
-      $iframe.classList.remove('active');
-      $iframe.src = 'about:blank';
-    }, 100);
+    if (element.dataset.is === 'embed') {
+      setTimeout(() => {
+        $iframe.classList.remove('active');
+        $iframe.src = 'about:blank';
+      }, 100);
+    }
 
     isOpen = false;
+    element = null;
   }
 }
 

@@ -99,9 +99,17 @@ body {
       &:before {
         opacity: 1;
       }
+    }
 
-      > .js-canvas {
+    &.embed {
+      .js-target > .js-canvas {
         transform: translateY(0);
+      }
+    }
+
+    &.menu {
+      .js-target  {
+        // FIXME: handle menu behavior
       }
     }
 
