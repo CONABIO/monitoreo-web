@@ -22,15 +22,13 @@ html
     .wrapper
       .segment.header
         .container
-          //- img(src='images/lconabio_25.svg' width=200)
-
-          nav.flex(style='min-height:100px')
+          nav.flex
             .cell
               img(src='images/' + site.logo height=80)
-            .cell.md-show
+            .cell.col-60.md-show
               .flex
                 each x in site.sections
-                  .cell
+                  .cell.col-25
                     h4= x.name
                     p.lg-show= x.description
             .cell.is-opened
