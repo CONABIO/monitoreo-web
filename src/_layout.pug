@@ -24,11 +24,11 @@ html
         .container
           nav.flex
             .cell
-              img(src='images/' + site.logo height=80)
+              img(src='images/' + site.logo height=70)
             .cell.col-60.md-show
               .flex
                 each x in site.sections
-                  .cell.col-25
+                  a.cell.col-25(href='#')
                     h4= x.name
                     p.lg-show= x.description
             .cell.is-opened
