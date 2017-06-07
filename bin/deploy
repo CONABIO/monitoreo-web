@@ -1,8 +1,8 @@
-#!/bin/bash
+#!/bin/sh
 
 OPTIONS="-avzC --exclude-from exclude.txt"
 TRANSPORT='ssh -p 22'
-CONNECTION='pate@coati'
+CONNECTION='pat@dgpi'
 REMOTE_PATH='/var/www/html/web'
 
 rsync $OPTIONS -e "$TRANSPORT" ./build/ $CONNECTION:$REMOTE_PATH
