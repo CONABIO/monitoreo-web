@@ -14,7 +14,7 @@ block main
 
     .segment.padded
       .flex.container
-        .col
+        .col-2
           .box
             a.
             img.banner(src="http://lorempixel.com/400/200/cats/")
@@ -23,8 +23,8 @@ block main
                 |http://snmbserve.conabio.gob.mx/app/
             p.marg.body Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
 
-        each x in new Array(5)
-          .col
+        each x in new Array(3)
+          .col-2
             .box
               img.banner(src="http://lorempixel.com/400/200/cats/")
               h4.marg.caption Lorem Ipsum

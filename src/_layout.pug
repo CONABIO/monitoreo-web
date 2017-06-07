@@ -44,7 +44,7 @@ html
             a.cell.js-close(href='#') &times;
 
       block main
-      
+
       each type in ['green', 'grey', 'light-blue', 'blue']
 
         .segment.padded(class=type)
@@ -61,10 +61,9 @@ html
       .segment.blank
         .container.flex
           each x in site.logos
-            .col2
+            .col-6
               .box
                 img.banner(src='images/' + x.img)
-
 
       .footer
         p Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
