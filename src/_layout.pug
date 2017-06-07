@@ -30,7 +30,7 @@ html
               .flex
                 each x in site.sections
                   .item.cell.col-25
-                    a(href='#')
+                    a.js-open(href=x.url target='_blank' data-is='embed')
                       h4= x.name
                       p.lg-show= x.description
             .cell.is-opened
