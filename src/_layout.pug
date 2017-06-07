@@ -24,7 +24,8 @@ html
         .container
           nav.flex
             .cell
-              img(src='images/' + site.logo height=70)
+              a(href='/')
+                img(src='images/' + site.logo height=70)
             .cell.col-60.md-show
               .flex
                 each x in site.sections
