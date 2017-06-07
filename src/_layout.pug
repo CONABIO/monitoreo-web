@@ -25,23 +25,20 @@ html
           //- img(src='images/lconabio_25.svg' width=200)
 
           nav.flex(style='min-height:100px')
-            .cell.md-show
-              img(src='images/lconabio_25.svg' height=80)
             .cell
+              img(src='images/' + site.logo height=80)
+            .cell.md-show
               .flex
-                .cell
-                  h4 Site A
-                  p.sm-hide Short description
-                .cell
-                  h4 Site B
-                  p.sm-hide Short description
-                .cell
-                  h4 Site C
-                  p.sm-hide Short description
-                .cell
-                  h4 Site D
-                  p.sm-hide Short description
-            a.cell.js-close(href='#') &times;
+                each x in site.sections
+                  .cell
+                    h4= x.name
+                    p.lg-show= x.description
+            .cell.is-opened
+              a.btn.has-symbol.js-close(href='#')
+                span.symbol ×
+            .cell.md-hide.is-closed
+              span.btn.has-symbol
+                span.symbol ▾
 
       block main
 

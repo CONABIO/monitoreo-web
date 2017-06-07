@@ -1,7 +1,15 @@
+logo: logo-conabio.svg
+
 logos:
-- img: Logo CONANP HORIZONTAL 2013_1_ TRES LINEAS-01.png
-- img: Resiliencia.png
-- img: CONAFOR_NvoLogoDic2013_HD_Horizontal.png
-- img: giz_bmub3.png
-- img: PNUD_Logo-azul-tagline-negro.png
-- img: GEF logo colored NOTAG transparent.png
+- img: logo-conanp.png
+- img: logo-resiliencia.png
+- img: logo-conafor.png
+- img: logo-giz.png
+- img: logo-pnud.png
+- img: logo-gef.png
+
+sections:
+- name: Geoportal
+- name: SNMB
+- name: MadMEx
+- name: Dashboard

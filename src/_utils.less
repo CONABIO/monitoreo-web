@@ -11,6 +11,19 @@
   margin: @m-one;
 }
 
+.btn {
+  border: 1px solid rgba(255, 255, 255, .7);
+  color: rgba(255, 255, 255, .7);
+  border-radius: 3px;
+  padding: .2em .5em;
+  cursor: pointer;
+
+  &:hover {
+    border-color: white;
+    color: white;
+  }
+}
+
 .js-target {
   position: fixed;
   bottom: auto;
@@ -71,11 +84,20 @@
   }
 }
 
-.js-close {
-  visibility: hidden;
+.has-symbol {
   text-decoration: none;
-  text-align: center;
-  color: white;
+  line-height: 1.2em;
+  font-size: 1.2em;
+  color: inherit;
+
+  .symbol {
+    font-size: 1.2em;
+    font-weight: 100;
+  }
+}
+
+.is-opened {
+  visibility: hidden;
 }
 
 body {
@@ -94,8 +116,12 @@ body {
       }
     }
 
-    .js-close {
+    .is-opened {
       visibility: visible;
+    }
+
+    .is-closed {
+      display: none;
     }
   }
 }
