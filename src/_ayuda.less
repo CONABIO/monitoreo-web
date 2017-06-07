@@ -2,18 +2,14 @@
 	background-color: @base-color;
 	font-family: opensans, "Helvetica", Arial;
 	color: @gray-dark;
+	font-size: 14px;
 
-}
-
-.helptab {
-		
 }
 
 .tabs {
 	padding-left: 0;
 	display: block;
-	font-size: 14px;
-	xborder-bottom: 1px solid #dddddd;
+	
 }
 
 .tab {
@@ -23,21 +19,28 @@
 	padding: 8px 12px;
 	margin-right: 2px;
 	border-radius: 2px 2px 0 0;
+
 }
 
 .tab:active {
-	border-top: 1px solid transparent;
+	border: 1px solid @gray-medium;
+	border-bottom: 1px solid transparent;
 	background-color: @very-light-gray;
 	color: maroon;
 	cursor: pointer;
+
 }
 
 .tab-bodies {
-	background: violet;
+	background-color: @very-light-gray;
 	border: 1px solid @gray-medium;
-	border-top: 1px solid transparent;
+	margin-top: -1px;
+	padding: 1.5em;
+	list-style: none;
 }
+
 
 .tab-body {
 	clear: both;
 }
+
