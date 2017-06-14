@@ -49,11 +49,12 @@ img {
 
 .content {
 	top: 0;
-	height: 500px;
+	height: 790px;
 	overflow: hidden;
 }
 
 .cover {
+  background-position: 50% 50%;
 	background-size: cover;
 	position: fixed;
 	z-index: -1;
@@ -82,7 +83,18 @@ img {
 #menu {
 	z-index: 1;
 	text-align: center;
+  position: relative;
 	background-color: @white;
+
+  .mouse-icon {
+    position: absolute;
+    z-index: -1;
+    margin: auto;
+    width: 24px;
+    right: 0;
+    left: 0;
+    top: -70px;
+  }
 }
 
 .segment {

@@ -1,12 +1,13 @@
 logo: logo-conabio.svg
 
 logos:
-- img: logo-conanp.png
-- img: logo-resiliencia.png
 - img: logo-conafor.png
-- img: logo-giz.png
+- img: logo-conanp.png
+- img: logo-fmcn.jpg
 - img: logo-pnud.png
 - img: logo-gef.png
+- img: logo-giz.png
+# - img: logo-resiliencia.png
 
 sections:
 - name: Geoportal

@@ -35,6 +35,7 @@
 const $iframe = document.querySelector('.js-canvas iframe');
 const $close = document.querySelector('.js-close');
 const $head = document.querySelector('.header');
+const $mouse = document.querySelector('.mouse-icon');
 const $body = document.body;
 
 const elements = [];
@@ -96,11 +97,14 @@ window.addEventListener('keyup', e => {
 });
 
 function check() {
-  const max = 550;
-  const my = Math.max(window.scrollY, 400);
+  const min = 200;
+  const max = 700;
+  const my = Math.max(window.scrollY, min);
   const p = (Math.min(max, my) / max) * 100;
 
   $head.style.backgroundColor = `rgba(60, 60, 60, ${p / 100})`;
+  $mouse.style.transform = `translateY(${p}%)`;
+  $mouse.style.opacity = Math.abs((p / 100) - 1);
 }
 
 window.addEventListener('scroll', () => {
