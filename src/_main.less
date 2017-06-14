@@ -77,14 +77,51 @@ img {
 
 .box {
   &.product {
+    position: relative;
+
     img {
       margin: auto;
       display: block;
+      max-width: 90%;
       max-height: 200px;
       position: relative;
       margin-bottom: 20px;
       border: @m-one solid @white;
+      transform: translateX(-5px);
       box-shadow: 10px 10px 10px rgba(0, 0, 0, .2);
+    }
+
+    p {
+      background-color: rgba(60, 60, 60, .9);
+      transform: translateY(120%);
+      border-radius: 3px;
+      transition: .4s;
+      opacity: 0;
+      visibility: hidden;
+      position: absolute;
+      padding: @m-one;
+      color: @white;
+      bottom: 0;
+      right: 0;
+      left: 0;
+    }
+
+    &:hover p {
+      transform: translateY(0);
+      visibility: visible;
+      opacity: 1;
+    }
+
+    a {
+      text-decoration: none;
+      display: block;
+      color: @white;
+    }
+
+    span {
+      text-decoration: underline;
+      margin-top: @m-one;
+      display: block;
     }
   }
 

@@ -21,4 +21,7 @@ block main
             .box.product
               img.banner(src='/images/' + x.img)
               h4.marg.caption.center= x.title
-              p.marg.body= x.description
+              p.marg.body
+                a(href='#')
+                  = x.description
+                  span Ver más
