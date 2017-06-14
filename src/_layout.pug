@@ -27,12 +27,12 @@ html
               a(href='/')
                 img(src='images/' + site.logo height=70)
             .cell.col-60.md-show
-              .flex
+              .flex.center
                 each x in site.sections
-                  .item.cell.col-25
-                    a.js-open(href=x.url target='_blank' data-is='embed')
-                      h4= x.name
-                      p.lg-show= x.description
+                  if x.menu === true
+                    .item.cell
+                      a.js-open(href=x.url target='_blank' data-is='embed')
+                        = x.name
             .cell.is-opened
               a.btn.has-symbol.js-close(href='#')
                 span.symbol ×
@@ -56,15 +56,15 @@ html
       //-         a.secundary.link(href='#') Donec non enim
 
       .segment.blank
-        .container.flex
+        .container.flex.center
           each x in site.logos
             .col-6
               .box
                 img.logo(src='images/' + x.img)
 
-      .footer
-        p Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-        a.link(href='#') Donec non enim
+      .footer.center
+        p Liga Periférico - Insurgentes Sur, Núm. 4903, Col. Parques del Pedregal, Del. Tlalpan, C.P. 14010, México, CDMX | Tel. (55) 5004-5000
+        p Comentarios y sugerencias generales a: #[a.link(href='#') Donec non enim]
 
       .js-target
         .js-canvas.is-submenu

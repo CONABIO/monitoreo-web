@@ -1,4 +1,5 @@
 logo: logo-conabio.svg
+cover: las-aves.jpg
 
 logos:
 - img: logo-conafor.png
@@ -10,12 +11,57 @@ logos:
 # - img: logo-resiliencia.png
 
 sections:
-- name: Geoportal
+- menu: true
+  name: Geoportal
+  img: 1_geoportal.png
+  title: Productos espaciales
   url: http://snmbserve.conabio.gob.mx/app
-  description: Ullamco mollit labore id tempor.
-- name: SNMB
-  description: Ut incididunt ex pariatur in lol.
-- name: MadMEx
-  description: Consequat esse anim laboris in.
-- name: Dashboard
-  description: In anim sunt amet consectetur.
+  description: |
+    Podrás visualizar información espacial sobre el territorio nacional:
+    cobertura de suelo, mapas de deforestación, características de bosques e
+    integridad ecosistémica.
+
+- menu: true
+  name: Estadísticas
+  title: Estadísticas nacionales
+  img: 2_estadisticas_nacionales.png
+  url: '#'
+  description: |
+    Podrás consultar estadísticas sobre el estado y las tendencias
+    de los ecosistemas mexicanos, a distintos niveles de agregación:
+    nacional, por estado, en áreas naturales protegidas, etc.
+
+- menu: true
+  name: MadMEx
+  title: Infografías y videos
+  img: 3_infografias_videos.png
+  url: '#'
+  description: |
+    Podrás consultar y descargar infografías y videos sobre la información generada
+    en los proyectos asociados a este portal.
+
+- menu: true
+  name: Dashboard
+  title: Registros de especies
+  img: 4_registros_de_especies.png
+  url: '#'
+  description: |
+    Podrás hacer consultas espaciales y taxonómicas sobre fauna presente en méxico.
+
+- menu: true
+  name: Especies
+  title: Especies mexicanas
+  img: 5_especies_mexicanas.png
+  url: '#'
+  description: |
+    Podrás consultar información biológica sobre especies de tu elección.
+
+- menu: true
+  name: SNMB
+  title: Dashboard SNMB
+  img: 6_dashboard_snmb.png
+  url: '#'
+  description: |
+    Estadísticas sobre el volumen y naturaleza de los datos generados a
+    partir de los sistemas operacionales de monitoreo de biodiversidad
+    asociados a este portal.

@@ -2,6 +2,8 @@
 body, html {
 	height: 100%;
 	margin: 0;
+  letter-spacing: 0.02em;
+  line-height: 1.42857143;
 	font-family: opensans, "Helvetica", Arial;
 	color: @gray;
 }
@@ -35,15 +37,8 @@ img {
     float: right;
   }
 
-  .col-25 {
-    min-height: 75px;
-  }
-
-  @media screen and (max-width: 959px) {
-    .col-25 {
-      text-align: center;
-      line-height: 55px;
-    }
+  .item a {
+    display: block;
   }
 }
 
@@ -66,25 +61,46 @@ img {
 
 .item {
   padding: @m-one;
+  border-right: 1px solid rgba(255, 255, 255, .3);
 
-  &:hover {
-    background-color: rgba(255, 255, 255, .1);
-  }
+  &:last-child { border: 0; }
 
   a {
     color: rgba(255, 255, 255, .7);
     text-decoration: none;
 
-    h4 {
+    &:hover {
       color: @white;
     }
   }
 }
 
+.box {
+  &.product {
+    img {
+      margin: auto;
+      display: block;
+      max-height: 200px;
+      position: relative;
+      margin-bottom: 20px;
+      border: @m-one solid @white;
+      box-shadow: 10px 10px 10px rgba(0, 0, 0, .2);
+    }
+  }
+
+  .caption {
+    color: @dark;
+    font-size: @sub-size;
+  }
+
+  .body {
+    color: @body;
+  }
+}
+
 #menu {
-	z-index: 1;
-	text-align: center;
-  position: relative;
+	z-index: -1;
+	position: relative;
 	background-color: @white;
 
   .mouse-icon {
@@ -193,8 +209,8 @@ img {
 
 .footer {
 	background-color: @black;
+  font-size: 80%;
 	padding: 5%;
-	text-align: center;
 
 	.link {
 		color: @gray;
