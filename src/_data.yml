@@ -60,7 +60,7 @@ sections:
   name: SNMB
   title: Dashboard SNMB
   img: 6_dashboard_snmb.png
-  url: '#'
+  url: http://www.biodiversidad.gob.mx/sistema_monitoreo/
   description: |
     Estadísticas sobre el volumen y naturaleza de los datos generados a
     partir de los sistemas operacionales de monitoreo de biodiversidad

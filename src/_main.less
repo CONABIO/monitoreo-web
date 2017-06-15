@@ -82,6 +82,32 @@ img {
   }
 }
 
+.rotated {
+  &:nth-child(1) {
+    .banner { transform: rotate(-3deg); }
+  }
+
+  &:nth-child(2) {
+    .banner { transform: rotate(4deg); }
+  }
+
+  &:nth-child(3) {
+    .banner { transform: rotate(-2deg); }
+  }
+
+  &:nth-child(4) {
+    .banner { transform: rotate(2deg); }
+  }
+
+  &:nth-child(5) {
+    .banner { transform: rotate(-3deg); }
+  }
+
+  &:nth-child(6) {
+    .banner { transform: rotate(2deg); }
+  }
+}
+
 .box {
   &.product {
     position: relative;
@@ -95,6 +121,7 @@ img {
       margin-bottom: 20px;
       border: @m-one solid @white;
       transform: translateX(-5px);
+      border-radius: 3px;
       box-shadow: 10px 10px 10px rgba(0, 0, 0, .2);
     }
 
@@ -113,10 +140,19 @@ img {
       left: 0;
     }
 
+    h4 {
+      opacity: 1;
+      transition: .3s;
+    }
+
     &:hover p {
       transform: translateY(0);
       visibility: visible;
       opacity: 1;
+    }
+
+    &:hover h4 {
+      opacity: 0;
     }
 
     a {
