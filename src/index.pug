@@ -5,6 +5,41 @@
 
 extends _layout
 
+mixin siteSections
+  .segment.padded.green
+    .flex.container
+      each x in site.sections
+        .col-2
+          .box.product
+            img.banner(src='/images/' + x.img)
+            h4.marg.caption.center.bisel= x.title
+            p.marg.body
+              a(href='#')
+                = x.description
+                span Ver más
+
+mixin siteIntro
+  .segment.padded.blue
+    #info.container
+      h1.marg.subcolor Ésta es una #[span.highlight plataforma digital] para diseminar productos de información sobre #[span.highlight biodiversidad mexicana].
+      .parr.marg
+        p
+          |Está alimentado de los datos de dos grandes sistemas operacionales. MAD-Mex un sistema de gestión y análisis automatizado
+          |de datos satelitales y el Sistema Nacional de Monitoreo de Biodiversidad
+          |(#[a.secondary.link(href='http://www.biodiversidad.gob.mx/sistema_monitoreo/') SNMB]) que genera datos
+          |sistemáticos a gran escala sobre biodiversidad mediante metodologías manuales
+          |y la colocación de sensores (fototrampas y grabadoras de sonido) en campo.
+
+        p.hint
+          |En esta plataforma podrás encontrar mapas de cobertura de suelo, cambio de
+          |cobertura de suelo, diversidad estructural de los bosques y selvas mexicanas
+          |así como estadísticas sobre su estado de conservación, vulnerabilidad y tendencias
+          |en el tiempo.
+
+        p.hint
+          |También podrás encontrar un concentrado de avistamientos de especies
+          |de animales georreferenciados e información biológica detallada de tales especies.
+
 block main
   .content
     .cover(style=`background-image:url(/images/${site.cover})`)
@@ -14,14 +49,5 @@ block main
     .mouse-icon
       .wheel.drop
 
-    .segment.padded.green
-      .flex.container
-        each x in site.sections
-          .col-2
-            .box.product
-              img.banner(src='/images/' + x.img)
-              h4.marg.caption.center= x.title
-              p.marg.body
-                a(href='#')
-                  = x.description
-                  span Ver más
+    +siteSections
+    +siteIntro

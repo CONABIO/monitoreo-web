@@ -8,6 +8,10 @@ body, html {
 	color: @gray;
 }
 
+p ~ p {
+  margin-top: .6em;
+}
+
 img {
   max-width: 100%;
 }
@@ -158,6 +162,20 @@ img {
 		padding: @pad-y @pad-x;
 	}
 
+  .highlight {
+    color: #111;
+  }
+
+  .hint {
+    border-radius: 3px;
+    padding: @m-one;
+    padding-left: @m-one * 5;
+    background-color: rgba(255, 255, 255, .3);
+    background-repeat: no-repeat;
+    background-position: @m-one @m-one;
+    background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMS4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDY1IDY1IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA2NSA2NTsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSIzMnB4IiBoZWlnaHQ9IjMycHgiPgo8Zz4KCTxnPgoJCTxwYXRoIGQ9Ik0zMi41LDBDMTQuNTgsMCwwLDE0LjU3OSwwLDMyLjVTMTQuNTgsNjUsMzIuNSw2NVM2NSw1MC40MjEsNjUsMzIuNVM1MC40MiwwLDMyLjUsMHogTTMyLjUsNjFDMTYuNzg1LDYxLDQsNDguMjE1LDQsMzIuNSAgICBTMTYuNzg1LDQsMzIuNSw0UzYxLDE2Ljc4NSw2MSwzMi41UzQ4LjIxNSw2MSwzMi41LDYxeiIgZmlsbD0iI0ZGRkZGRiIvPgoJCTxjaXJjbGUgY3g9IjMzLjAxOCIgY3k9IjE5LjU0MSIgcj0iMy4zNDUiIGZpbGw9IiNGRkZGRkYiLz4KCQk8cGF0aCBkPSJNMzIuMTM3LDI4LjM0MmMtMS4xMDQsMC0yLDAuODk2LTIsMnYxN2MwLDEuMTA0LDAuODk2LDIsMiwyczItMC44OTYsMi0ydi0xN0MzNC4xMzcsMjkuMjM3LDMzLjI0MSwyOC4zNDIsMzIuMTM3LDI4LjM0MnogICAgIiBmaWxsPSIjRkZGRkZGIi8+Cgk8L2c+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==)
+  }
+
 	.container {
 		max-width: @mx-width;
 		margin: auto;
@@ -191,7 +209,6 @@ img {
 
 		.subcolor {
 			color: @yellow;
-
 		}
 
 		.link {
@@ -206,13 +223,13 @@ img {
 			color: @yellow;
 		}
 
-		.secundary {
+		.secondary {
 			text-decoration: none;
 		}
 
-		.secundary:hover {
-			text-decoration: underline;
-		}
+		.secondary:hover {
+      text-decoration: underline;
+    }
 	}
 
 	&.light-blue {
@@ -226,17 +243,21 @@ img {
 	&.blue {
 		background-color: @dark-cyan;
 
-		.subcolor {
-			color: @green;
-		}
-
-		.link {
+    .link {
 			color: @gray;
 		}
 
 		.link:hover {
 			color: @green;
 		}
+
+    .subcolor, .secondary {
+      color: @green;
+    }
+
+    .secondary:hover {
+      text-decoration: underline;
+    }
 	}
 
 }
