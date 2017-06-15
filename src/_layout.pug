@@ -34,11 +34,11 @@ html
                       a.js-open(href=x.url target='_blank' data-is='embed')
                         = x.name
             .cell.is-opened
-              a.btn.has-symbol.js-close(href='#')
-                span.symbol ×
+              a.btn.js-close(href='#')
+                span.arrow-down.flip-y
             .cell.md-hide.is-closed
-              a.btn.has-symbol.js-open(href='#' data-is='menu')
-                span.symbol ▾
+              a.btn.js-open(href='#' data-is='menu')
+                span.arrow-down
 
       block main
 
