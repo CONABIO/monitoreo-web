@@ -43,7 +43,8 @@ mixin siteIntro
 
 block main
   .content
-    .cover(style=`background-image:url(/images/${site.cover})`)
+    for x in site.cover
+      .cover(style=`background-image:url(/images/${x})`)
 
   #menu
 

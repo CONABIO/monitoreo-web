@@ -1,3 +1,28 @@
+const coverImages = [].slice.call(document.querySelectorAll('.cover'));
+
+let lastImg;
+let inc = 0;
+
+function cycle() {
+  if (lastImg) {
+    lastImg.classList.remove('active');
+  }
+
+  const imgNode = coverImages[inc++ % coverImages.length];
+
+  if (!lastImg || lastImg !== imgNode) {
+    setTimeout(() => {
+      imgNode.classList.add('active');
+    }, 400);
+
+    setTimeout(cycle, 10000);
+
+    lastImg = imgNode;
+  }
+}
+
+cycle();
+
 [].slice.call(document.querySelectorAll('ul.js-tabs'))
 .forEach(srcNode => {
   const targetNode = srcNode.nextElementSibling;
@@ -30,7 +55,6 @@
     }
   });
 });
-
 
 const $iframe = document.querySelector('.js-canvas iframe');
 const $close = document.querySelector('.js-close');

@@ -1,5 +1,8 @@
 logo: logo-conabio.svg
-cover: las-aves.jpg
+cover:
+- fox.png
+- garza.png
+- coyote.png
 
 logos:
 - img: logo-conafor.png
