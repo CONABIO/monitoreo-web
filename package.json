@@ -64,7 +64,7 @@
     "pug": "^2.0.0-rc.1",
     "rollup": "^0.41.6",
     "talavera": "^0.4.0",
-    "tarima": "^3.2.1"
+    "tarima": "^3.6.1"
   },
   "optionalDependencies": {
     "chokidar": "^1.7.0",
