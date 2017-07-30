@@ -27,7 +27,7 @@ sections:
 - menu: true
   name: Estadísticas
   title: Estadísticas nacionales
-  img: 2_estadisticas_nacionales.png
+  img: 3_infografias_videos.png
   url: '#'
   description: |
     Podrás consultar estadísticas sobre el estado y las tendencias
@@ -36,8 +36,8 @@ sections:
 
 - menu: true
   name: Dashboard
-  title: Infografías y videos
-  img: 3_infografias_videos.png
+  title: Dashboard datos
+  img: 2_estadisticas_nacionales.png
   url: '#'
   description: |
     Podrás consultar y descargar infografías y videos sobre la información generada
@@ -53,7 +53,7 @@ sections:
 
 - menu: true
   name: Enciclovida
-  title: Especies Mexicanas (Enciclovida)
+  title: Especies Mexicanas
   img: 5_especies_mexicanas.png
   url: http://www.enciclovida.mx/
   description: |
@@ -61,7 +61,7 @@ sections:
 
 - menu: true
   name: Materiales
-  title: Dashboard SNMB
+  title: Materiales y recursos
   img: 6_dashboard_snmb.png
   url: http://www.biodiversidad.gob.mx/sistema_monitoreo/
   description: |
