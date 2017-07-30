@@ -9,7 +9,7 @@ mixin siteSections
   .segment.padded.green
     .flex.container
       each x in site.sections
-        .col-2.rotated
+        .col-2
           .box.product
             .banner
               img(src='/images/' + x.img)
@@ -51,5 +51,5 @@ block main
     .mouse-icon
       .wheel.drop
 
-    +siteSections
     +siteIntro
+    +siteSections

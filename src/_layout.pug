@@ -31,7 +31,7 @@ html
                 each x in site.sections
                   if x.menu === true
                     .item.cell
-                      a.js-open(href=x.url target='_blank' data-is='embed')
+                      a(href=x.url target='_blank')
                         = x.name
             .cell.is-opened
               a.btn.js-close(href='#')
@@ -63,14 +63,13 @@ html
                 img.logo(src='images/' + x.img)
 
       .footer.center
-        p Liga Periférico - Insurgentes Sur, Núm. 4903, Col. Parques del Pedregal, Del. Tlalpan, C.P. 14010, México, CDMX | Tel. (55) 5004-5000
-        p Comentarios y sugerencias generales a: #[a.link(href='#') Donec non enim]
+        p Liga Periférico - Insurgentes Sur, Núm. 4903, Col. Parques del Pedregal, Delegación Tlalpan, 14010, Ciudad de México.
 
       .js-target
         .js-canvas.is-submenu
           ul.reset
             each x in site.sections
-              li.item: a.js-open(href=x.url target='_blank' data-is='embed')
+              li.item: a(href=x.url target='_blank')
                 h4= x.name
                 p= x.description
         .js-canvas.is-iframe

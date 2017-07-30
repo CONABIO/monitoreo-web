@@ -35,7 +35,7 @@ sections:
     nacional, por estado, en áreas naturales protegidas, etc.
 
 - menu: true
-  name: MadMEx
+  name: Dashboard
   title: Infografías y videos
   img: 3_infografias_videos.png
   url: '#'
@@ -44,7 +44,7 @@ sections:
     en los proyectos asociados a este portal.
 
 - menu: true
-  name: Dashboard
+  name: Registros
   title: Registros de especies
   img: 4_registros_de_especies.png
   url: '#'
@@ -52,15 +52,15 @@ sections:
     Podrás hacer consultas espaciales y taxonómicas sobre fauna presente en méxico.
 
 - menu: true
-  name: Especies
-  title: Especies mexicanas
+  name: Enciclovida
+  title: Especies Mexicanas (Enciclovida)
   img: 5_especies_mexicanas.png
-  url: '#'
+  url: http://www.enciclovida.mx/
   description: |
     Podrás consultar información biológica sobre especies de tu elección.
 
 - menu: true
-  name: SNMB
+  name: Materiales
   title: Dashboard SNMB
   img: 6_dashboard_snmb.png
   url: http://www.biodiversidad.gob.mx/sistema_monitoreo/
