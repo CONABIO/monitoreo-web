@@ -2,7 +2,7 @@
 
 OPTIONS="-avzC --exclude-from exclude.txt"
 TRANSPORT='ssh -p 22'
-CONNECTION='pat@dgpi'
+CONNECTION='pat@monitoreo'
 REMOTE_PATH='/var/www/html/web'
 
 rsync $OPTIONS -e "$TRANSPORT" ./build/ $CONNECTION:$REMOTE_PATH
