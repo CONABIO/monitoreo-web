@@ -18,7 +18,7 @@ sections:
   name: Geoportal
   img: 1_geoportal.png
   title: Productos espaciales
-  url: http://snmbserve.conabio.gob.mx/app
+  url: http://monitoreo.conabio.gob.mx/geoapp
   description: |
     Podrás visualizar información espacial sobre el territorio nacional:
     cobertura de suelo, mapas de deforestación, características de bosques e

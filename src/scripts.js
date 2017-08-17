@@ -77,6 +77,8 @@ let isOpen;
     $body.classList.add(e.currentTarget.dataset.is);
 
     if (e.currentTarget.dataset.is === 'embed') {
+      document.body.style.overflow = 'hidden';
+
       $iframe.src = e.currentTarget.href;
       $iframe.onload = () => {
         setTimeout(() => {
@@ -102,6 +104,8 @@ function close() {
 
     if (element.dataset.is === 'embed') {
       setTimeout(() => {
+        document.body.style.overflow = '';
+
         $iframe.classList.remove('active');
         $iframe.src = 'about:blank';
       }, 100);

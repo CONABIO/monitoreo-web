@@ -31,7 +31,7 @@ html
                 each x in site.sections
                   if x.menu === true
                     .item.cell
-                      a(href=x.url target='_blank')
+                      a.js-open(href=x.url target='_blank' data-is='embed')
                         = x.name
             .cell.is-opened
               a.btn.js-close(href='#')
