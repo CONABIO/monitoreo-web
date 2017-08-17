@@ -137,7 +137,7 @@ window.addEventListener('keyup', e => {
 });
 
 function check() {
-  const min = 200;
+  const min = 500;
   const max = 700;
   const my = Math.max(window.scrollY, min);
   const p = (Math.min(max, my) / max) * 100;

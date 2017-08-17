@@ -49,7 +49,14 @@ mixin siteIntro
 block main
   .content
     for x in site.cover
-      .cover(style=`background-image:url(/images/${x})`)
+      if x.video
+        .cover
+          video(loop muted autoplay)
+            source(src=`/assets/${x.video}.webm` type='video/webm')
+            source(src=`/assets/${x.video}.mp4` type='video/mp4')
+            source(src=`/assets/${x.video}.ogv` type='video/ogg')
+      else
+        .cover(style=`background-image:url(/images/${x})`)
 
   #menu
 
