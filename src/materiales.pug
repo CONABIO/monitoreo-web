@@ -1,0 +1,57 @@
+//-
+  ---
+  site: !include _data.yml
+  ---
+
+extends _layout
+
+block body
+
+  //- each type in ['grey', 'light-blue', 'white']
+  //-   .segment.padded(class=type)
+  //-     .container
+  //-       h1.title.marg.subcolor HTML Ipsum Presents
+  //-       p.parr.marg
+  //-         strong.subcolor Pellentesque habitant morbi tristique
+  //-         |  Senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor     quam, feugiat vitae, ultricies eget, tempor sit  amet, ante. Donec eu libero sit amet quam egestas semper.
+  //-         |  Ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac   dui.
+  //-         a.link(href='#') Donec non enim
+  //-         |  in turpis pulvinar facilisis. Ut felis.
+  //-         a.secundary.link(href='#') Donec non enim
+
+  .segment.padded.white
+    .content.container
+      h1.title.marg Materiales
+      p.marg.subcolor #[a.link(href='#snmb') SNMB] / #[a.link(href='#madmex') MAD-Mex]
+
+  .segment.padded.light-blue
+    .container
+      a(name='snmb')
+      h2.marg SNMB
+      h4.marg.subcolor Cliente de captura
+      ul
+        li Software v. 123 &mdash; #[a.link(href='#') descarga]
+        li Manual v.1.23 &mdash; #[a.link(href='#') descarga]
+
+      h4.marg.subcolor Fusionador de bases de datos
+      ul
+        li Software v. 123 &mdash; #[a.link(href='#') descarga]
+        li Manual v.1.23 &mdash; #[a.link(href='#') descarga]
+
+      h4.marg.subcolor Reporteador de bases de datos
+      ul
+        li Link a la aplicación: #[a.link(href='http://coati.conabio.gob.mx/reporteador/' target='_blank') http://coati.conabio.gob.mx/reporteador/]
+        li Manual v.1.23 &mdash; #[a.link(href='#') descarga]
+        //- Videos:
+        //- ¿asdaslkjdsalj --- descarga
+        //- Asldjal ---- descarga
+        //- Infografías:
+        //- Asdasdlj --- descarga
+        //- Aslkjdalkj --- descarga
+
+  .segment.padded.grey
+    .container
+      a(name='madmex')
+      h4.marg.subcolor MAD-Mex
+      ul
+        li Documentación --- #[a.link(href='#') descarga]

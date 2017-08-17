@@ -19,60 +19,58 @@ html
     link(rel='stylesheet' href='images/sprites.css')
 
   body
-    .wrapper
-      .segment.header
-        .container
-          nav.flex
-            .cell
-              a(href='/')
-                img(src='images/' + site.logo height=70)
-            .cell.col-60.md-show
-              .flex.center
-                each x in site.sections
-                  if x.menu === true
-                    .item.cell
-                      a.js-open(href=x.url target='_blank' data-is='embed')
-                        = x.name
-            .cell.is-opened
-              a.btn.js-close(href='#')
-                span.arrow-down.flip-y
-            .cell.md-hide.is-closed
-              a.btn.js-open(href='#' data-is='menu')
-                span.arrow-down
+    block body
+      .wrapper
+        .segment.header
+          .container
+            nav.flex
+              .cell
+                a(href='/')
+                  img(src='images/' + site.logo height=70)
+              .cell.col-60.md-show
+                .flex.center
+                  each x in site.sections
+                    if x.menu === true
+                      .item.cell
+                        if x.embed
+                          a.js-open(href=x.url data-is='embed')
+                            = x.name
+                        else
+                          a(href=x.url target='_blank')
+                            = x.name
+              .cell.is-opened
+                a.btn.js-close(href='#')
+                  span.arrow-down.flip-y
+              .cell.md-hide.is-closed
+                a.btn.js-open(href='#' data-is='menu')
+                  span.arrow-down
 
-      block main
+        block main
 
-      //- each type in ['green', 'grey', 'light-blue', 'blue']
+        .segment.blank
+          .container.flex.center
+            each x in site.logos
+              .col-6
+                .box
+                  img.logo(src='images/' + x.img)
 
-      //-   .segment.padded(class=type)
-      //-     .container
-      //-       h1.title.marg.subcolor HTML Ipsum Presents
-      //-       p.parr.marg
-      //-         strong.subcolor Pellentesque habitant morbi tristique
-      //-         |  Senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor     quam, feugiat vitae, ultricies eget, tempor sit  amet, ante. Donec eu libero sit amet quam egestas semper.
-      //-         |  Ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac   dui.
-      //-         a.link(href='#') Donec non enim
-      //-         |  in turpis pulvinar facilisis. Ut felis.
-      //-         a.secundary.link(href='#') Donec non enim
+        .footer.center
+          p Liga Periférico - Insurgentes Sur, Núm. 4903, Col. Parques del Pedregal, Delegación Tlalpan, 14010, Ciudad de México.
 
-      .segment.blank
-        .container.flex.center
-          each x in site.logos
-            .col-6
-              .box
-                img.logo(src='images/' + x.img)
-
-      .footer.center
-        p Liga Periférico - Insurgentes Sur, Núm. 4903, Col. Parques del Pedregal, Delegación Tlalpan, 14010, Ciudad de México.
-
-      .js-target
-        .js-canvas.is-submenu
-          ul.reset
-            each x in site.sections
-              li.item: a(href=x.url target='_blank')
-                h4= x.name
-                p= x.description
-        .js-canvas.is-iframe
-          iframe(src='about:blank' frameborder=0)
+        .js-target
+          .js-canvas.is-submenu
+            ul.reset
+              each x in site.sections
+                li.item
+                  if x.embed
+                    a.js-open(href=x.url data-is='embed')
+                      h4= x.name
+                      p= x.description
+                  else
+                    a(href=x.url target='_blank')
+                      h4= x.name
+                      p= x.description
+          .js-canvas.is-iframe
+            iframe(src='about:blank' frameborder=0)
 
   script(src='scripts.js')

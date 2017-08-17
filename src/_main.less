@@ -246,16 +246,29 @@ img {
 	}
 
 	&.green {
-		background-color: @green;
+    background-color: @green;
 
-		.subcolor {
-			color: @yellow;
-		}
+    .subcolor {
+      color: @yellow;
+    }
 
-		.link {
-			color: @dark-cyan;
-		}
-	}
+    .link {
+      color: @dark-cyan;
+    }
+  }
+
+  &.white {
+    background-color: @white;
+    color: @black;
+
+    .secondary {
+      color: @dark-red;
+    }
+
+    .subcolor, .link {
+      color: @moderate-cyan;
+    }
+  }
 
 	&.grey {
 		background-color: @black;
@@ -265,8 +278,8 @@ img {
 		}
 
 		.secondary {
-			text-decoration: none;
-		}
+      text-decoration: none;
+    }
 
 		.secondary:hover {
       text-decoration: underline;

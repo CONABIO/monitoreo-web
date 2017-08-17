@@ -15,6 +15,7 @@ logos:
 
 sections:
 - menu: true
+  embed: true
   name: Geoportal
   img: 1_geoportal.png
   title: Productos espaciales
@@ -25,20 +26,22 @@ sections:
     integridad ecosistémica.
 
 - menu: true
+  embed: true
   name: Estadísticas
   title: Estadísticas nacionales
   img: 3_infografias_videos.png
-  url: '#'
+  url: /estadisticas.html
   description: |
     Podrás consultar estadísticas sobre el estado y las tendencias
     de los ecosistemas mexicanos, a distintos niveles de agregación:
     nacional, por estado, en áreas naturales protegidas, etc.
 
 - menu: true
+  embed: true
   name: Dashboard
   title: Dashboard datos
   img: 2_estadisticas_nacionales.png
-  url: '#'
+  url: /dashboard.html
   description: |
     Podrás consultar y descargar infografías y videos sobre la información generada
     en los proyectos asociados a este portal.
@@ -47,7 +50,7 @@ sections:
   name: Registros
   title: Registros de especies
   img: 4_registros_de_especies.png
-  url: '#'
+  url: http://snmb.conabio.gob.mx/observations
   description: |
     Podrás hacer consultas espaciales y taxonómicas sobre fauna presente en méxico.
 
@@ -60,10 +63,11 @@ sections:
     Podrás consultar información biológica sobre especies de tu elección.
 
 - menu: true
+  embed: true
   name: Materiales
   title: Materiales y recursos
   img: 6_dashboard_snmb.png
-  url: http://www.biodiversidad.gob.mx/sistema_monitoreo/
+  url: /materiales.html
   description: |
     Estadísticas sobre el volumen y naturaleza de los datos generados a
     partir de los sistemas operacionales de monitoreo de biodiversidad

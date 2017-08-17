@@ -21,7 +21,9 @@ function cycle() {
   }
 }
 
-cycle();
+if (coverImages.length) {
+  cycle();
+}
 
 [].slice.call(document.querySelectorAll('ul.js-tabs'))
 .forEach(srcNode => {
@@ -71,10 +73,18 @@ let isOpen;
   node.addEventListener('click', e => {
     e.preventDefault();
 
-    elements.push(e.currentTarget);
+    let allowStack;
 
-    $body.classList.add('blocked');
-    $body.classList.add(e.currentTarget.dataset.is);
+    if (elements[elements.length - 1]) {
+      allowStack = elements[elements.length - 1].dataset.is !== e.currentTarget.dataset.is;
+    }
+
+    if (!isOpen || allowStack) {
+      elements.push(e.currentTarget);
+
+      $body.classList.add('blocked');
+      $body.classList.add(e.currentTarget.dataset.is);
+    }
 
     if (e.currentTarget.dataset.is === 'embed') {
       document.body.style.overflow = 'hidden';
@@ -91,10 +101,12 @@ let isOpen;
   });
 });
 
-$close.addEventListener('click', e => {
-  e.preventDefault();
-  close();
-});
+if ($close) {
+  $close.addEventListener('click', e => {
+    e.preventDefault();
+    close();
+  });
+}
 
 function close() {
   if (isOpen) {
@@ -130,9 +142,14 @@ function check() {
   const my = Math.max(window.scrollY, min);
   const p = (Math.min(max, my) / max) * 100;
 
-  $head.style.backgroundColor = `rgba(60, 60, 60, ${p / 100})`;
-  $mouse.style.transform = `translateY(${p}%)`;
-  $mouse.style.opacity = Math.abs((p / 100) - 1);
+  if ($head) {
+    $head.style.backgroundColor = `rgba(60, 60, 60, ${p / 100})`;
+  }
+
+  if ($mouse) {
+    $mouse.style.transform = `translateY(${p}%)`;
+    $mouse.style.opacity = Math.abs((p / 100) - 1);
+  }
 }
 
 window.addEventListener('scroll', () => {
