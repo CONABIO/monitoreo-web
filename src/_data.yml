@@ -1,4 +1,3 @@
-logo: logo-conabio.svg
 cover:
 - video: venado
 - fox.png
@@ -6,13 +5,35 @@ cover:
 - coyote.png
 
 logos:
-- img: logo-conafor.png
-- img: logo-conanp.png
-- img: logo-fmcn.jpg
+- img: logo-moore.jpg
 - img: logo-pnud.png
 - img: logo-gef.png
-- img: logo-giz.png
-# - img: logo-resiliencia.png
+- img: logo-resiliencia.png
+- img: logo-C6.png
+- img: logo-FGM.png
+- img: logo-GIZ.png
+- img: logo-INECOL.png
+- img: logo-ROBIN2.png
+- img: logo-ibunam.jpg
+- img: logo-USAID.png
+- img: logo-USFS.png
+- img: logo-INIFAP.jpg
+# - img: logo-conafor.png
+# - img: logo-conanp.png
+# - img: logo-fmcn.jpg
+# - img: logo-giz.png
+
+orgs:
+- img: assets/LOGO_SEMARNAT.png
+  url: '#'
+- img: images/logo-conabio.svg
+  url: /
+# - img: assets/LOGO_CONAFOR.png
+#   url: '#'
+- img: assets/LOGO_CONAP.png
+  url: '#'
+- img: assets/FMCN_blanco_alta.png
+  url: '#'
 
 sections:
 - menu: true
@@ -41,7 +62,7 @@ sections:
   embed: true
   name: Dashboard
   title: Dashboard datos
-  img: 2_estadisticas_nacionales.png
+  img: 6_dashboard_snmb.png
   url: /dashboard.html
   description: |
     Podrás consultar y descargar infografías y videos sobre la información generada
@@ -57,7 +78,7 @@ sections:
 
 - menu: true
   name: Enciclovida
-  title: Especies Mexicanas
+  title: Enciclovida
   img: 5_especies_mexicanas.png
   url: http://www.enciclovida.mx/
   description: |
@@ -67,7 +88,7 @@ sections:
   embed: true
   name: Materiales
   title: Materiales y recursos
-  img: 6_dashboard_snmb.png
+  img: 2_estadisticas_nacionales.png
   url: /materiales.html
   description: |
     Estadísticas sobre el volumen y naturaleza de los datos generados a

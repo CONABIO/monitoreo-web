@@ -24,9 +24,13 @@ html
         .segment.header
           .container
             nav.flex
-              .cell
-                a(href='/')
-                  img(src='images/' + site.logo height=70)
+              //- .cell
+              //-   a(href='/')
+              //-     img(src='images/' + site.logo height=70)
+              each x in site.orgs
+                .cell
+                  a(href=x.url)
+                    img(src=x.img height=x.height || 50)
               .cell.col-60.md-show
                 .flex.center
                   each x in site.sections
