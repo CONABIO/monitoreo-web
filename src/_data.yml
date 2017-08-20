@@ -1,3 +1,5 @@
+title: Monitoreo de biodiversidad
+
 cover:
 - video: venado
 - fox.png
@@ -28,8 +30,8 @@ orgs:
   url: '#'
 - img: images/logo-conabio.svg
   url: /
-# - img: assets/LOGO_CONAFOR.png
-#   url: '#'
+- img: assets/CONAFOR_Logo_Horizontal.png
+  url: '#'
 - img: assets/LOGO_CONAP.png
   url: '#'
 - img: assets/FMCN_blanco_alta.png
@@ -63,7 +65,7 @@ sections:
   name: Dashboard
   title: Dashboard datos
   img: 6_dashboard_snmb.png
-  url: /dashboard.html
+  url: http://monitoreo.conabio.gob.mx/snmb_charts/
   description: |
     Podrás consultar y descargar infografías y videos sobre la información generada
     en los proyectos asociados a este portal.
