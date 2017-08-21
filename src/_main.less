@@ -21,8 +21,22 @@ img {
   box-sizing: border-box;
 }
 
-.segment .container .flex {
-  padding: 10px;
+nav.flex .cell {
+  margin-right: 10px;
+
+  &:last-child {
+    margin: 0;
+  }
+}
+
+.segment .container {
+  .flex {
+    padding: 10px;
+
+    .flex {
+      padding-bottom: 0;
+    }
+  }
 
   .iblock {
     margin-right: 20px;

@@ -62,7 +62,24 @@ const $iframe = document.querySelector('.js-canvas iframe');
 const $close = document.querySelector('.js-close');
 const $head = document.querySelector('.header');
 const $mouse = document.querySelector('.mouse-icon');
+const $target = document.querySelector('.js-target');
 const $body = document.body;
+
+let tt;
+
+function _onResize() {
+  $target.style.transition = 'none';
+  $target.style.top = `${$head.getBoundingClientRect().height}px`;
+
+  clearTimeout(tt);
+  tt = setTimeout(() => {
+    $target.style.transition = '1s';
+  }, 1000);
+}
+
+window.addEventListener('resize', _onResize);
+
+_onResize();
 
 const elements = [];
 
@@ -93,6 +110,7 @@ let isOpen;
       $iframe.onload = () => {
         setTimeout(() => {
           $iframe.classList.add('active');
+          _onResize();
         }, 300);
       };
     }
@@ -120,6 +138,8 @@ function close() {
 
         $iframe.classList.remove('active');
         $iframe.src = 'about:blank';
+
+        _onResize();
       }, 100);
     }
 

@@ -23,16 +23,12 @@ html
       .wrapper
         .segment.header
           .container
-            nav.flex
-              //- .cell
-              //-   a(href='/')
-              //-     img(src='images/' + site.logo height=70)
-              .cell
-                each x in site.orgs
-                  a.iblock(href=x.url)
-                    img(src=x.img height=x.height || 50)
-              .cell.col-60.md-show
-                .flex.center
+            nav.flex.center
+              each x in site.orgs
+                a.cell(href=x.url)
+                  img(src=x.img height=x.height || 50)
+              .cell.md-show
+                .flex
                   each x in site.sections
                     if x.menu === true
                       .item.cell

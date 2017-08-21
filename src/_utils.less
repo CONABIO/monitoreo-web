@@ -64,7 +64,7 @@
     transition: .5s;
     width: 100%;
     margin: auto;
-    top: 75px;
+    top: 0;
     left: 0;
     right: 0;
     bottom: 0;
@@ -112,6 +112,11 @@
   height: 1em;
 }
 
+.is-opened {
+  display: none;
+  margin: 0 !important;
+}
+
 .header .js-close {
   visibility: hidden;
 }
@@ -157,6 +162,10 @@ body {
 
     .header .js-close {
       visibility: visible;
+    }
+
+    .is-opened {
+      display: block;
     }
 
     .is-closed {
