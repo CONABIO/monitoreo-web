@@ -25,7 +25,7 @@ html
           .container
             nav.flex.center
               each x in site.orgs
-                a.cell(href=x.url)
+                a.cell(href=x.url target='_blank')
                   img(src=x.img height=x.height || 50)
               .cell.md-show
                 .flex
