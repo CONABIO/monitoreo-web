@@ -27,15 +27,15 @@ logos:
 
 orgs:
 - img: assets/LOGO_SEMARNAT.png
-  url: '#'
+  url: https://www.gob.mx/semarnat
 - img: images/logo-conabio.svg
-  url: /
+  url: http://conabio.gob.mx/
 - img: assets/CONAFOR_Logo_Horizontal.png
-  url: '#'
+  url: https://www.gob.mx/conafor
 - img: assets/LOGO_CONAP.png
-  url: '#'
+  url: https://www.gob.mx/conanp
 - img: assets/FMCN_blanco_alta.png
-  url: '#'
+  url: https://fmcn.org/
 
 sections:
 - menu: true
