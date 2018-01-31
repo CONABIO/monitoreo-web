@@ -38,6 +38,10 @@ html
                         else
                           a(href=x.url target='_blank')
                             = x.name
+                        if x.children
+                          ul.sub-menu
+                            each item in x.children
+                              li: a(href=item.url target='_blank' title=item.title)= item.name
               .cell.is-opened
                 a.btn.js-close(href='#')
                   span.arrow-down.flip-y
@@ -70,6 +74,11 @@ html
                     a(href=x.url target='_blank')
                       h4= x.name
                       p= x.description
+
+                  if x.children
+                    ul.sub-list
+                      each item in x.children
+                        li: a(href=item.url target='_blank' title=item.title)= item.name
           .js-canvas.is-iframe
             iframe(src='about:blank' frameborder=0)
 
