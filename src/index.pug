@@ -9,20 +9,21 @@ mixin siteSections
   .segment.padded.green
     .flex.container
       each x in site.sections
-        .col-2
-          .box.product
-            .banner
-              img(src='/images/' + x.img)
-              h4.marg.caption.center= x.title
-            p.marg.body
-              if x.embed
-                a.js-open(href=x.url data-is='embed')
-                  = x.description
-                  span Ver más
-              else
-                a(href=x.url target='_blank')
-                  = x.description
-                  span Abrir enlace
+        if x.section
+          .col-2
+            .box.product
+              .banner
+                img(src='/images/' + x.img)
+                h4.marg.caption.center= x.title
+              p.marg.body
+                if x.embed
+                  a.js-open(href=x.url data-is='embed')
+                    = x.description
+                    span Ver más
+                else
+                  a(href=x.url target='_blank')
+                    = x.description
+                    span Abrir enlace
 
 mixin siteIntro
   .segment.padded.blue

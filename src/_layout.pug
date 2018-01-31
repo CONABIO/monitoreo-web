@@ -64,16 +64,17 @@ html
         .js-target
           .js-canvas.is-submenu
             ul.reset
-              each x in site.sections
+              each x, k in site.sections
                 li.item
                   if x.embed
-                    a.js-open(href=x.url data-is='embed')
-                      h4= x.name
-                      p= x.description
+                    a.js-open(href=x.url data-is='embed')= x.name
                   else
-                    a(href=x.url target='_blank')
-                      h4= x.name
-                      p= x.description
+                    a(href=x.url target='_blank')= x.name
+
+                  if x.description
+                    label(for=`_${k}`) ℹ
+                    input(type='checkbox' id=`_${k}`)
+                    p= x.description
 
                   if x.children
                     ul.sub-list

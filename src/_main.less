@@ -138,6 +138,7 @@ nav.flex .cell {
     a {
       display: block;
       padding: 10px;
+      padding-left: .8em;
       border-bottom: 1px solid gray;
 
       &:hover {
@@ -150,6 +151,7 @@ nav.flex .cell {
     position: relative;
 
     .sub-menu {
+      white-space: nowrap;
       box-shadow: 0 1px 2px rgba(0, 0, 0, .5);
       background-color: rgba(0, 0, 0, .6);
       position: absolute;
@@ -173,6 +175,41 @@ nav.flex .cell {
     &:hover .sub-menu {
       display: block;
     }
+  }
+}
+
+.is-submenu .item {
+  &::before {
+    content: '❯ ';
+  }
+
+  label {
+    color: @body;
+    border-radius: 50%;
+    position: relative;
+    background-color: @gray-border;
+    float: right;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 1;
+    text-shadow: 1px 1px 0 @gray;
+  }
+
+  input {
+    position: absolute;
+    visibility: hidden;
+    left: 0;
+    top: 0;
+
+    &:checked ~ p,
+    &:hover ~ p {
+      display: block;
+    }
+  }
+
+  p {
+    display: none;
   }
 }
 
