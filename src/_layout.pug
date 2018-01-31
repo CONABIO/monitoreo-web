@@ -41,7 +41,11 @@ html
                         if x.children
                           ul.sub-menu
                             each item in x.children
-                              li: a(href=item.url target='_blank' title=item.title)= item.name
+                              li
+                                if item.embed
+                                  a.js-open(href=item.url data-is='embed' title=item.title)= item.name
+                                else
+                                  a(href=item.url target='_blank' title=item.title)= item.name
               .cell.is-opened
                 a.btn.js-close(href='#')
                   span.arrow-down.flip-y
@@ -79,7 +83,11 @@ html
                   if x.children
                     ul.sub-list
                       each item in x.children
-                        li: a(href=item.url target='_blank' title=item.title)= item.name
+                        li
+                          if item.embed
+                            a.js-open(href=item.url data-is='embed' title=item.title)= item.name
+                          else
+                            a(href=item.url target='_blank' title=item.title)= item.name
           .js-canvas.is-iframe
             iframe(src='about:blank' frameborder=0)
 

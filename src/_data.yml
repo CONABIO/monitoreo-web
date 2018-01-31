@@ -51,7 +51,7 @@ sections:
     integridad ecosistémica.
 
 - menu: true
-  embed: true
+  embed: false
   name: MAD-Mex
   url: http://madmex.conabio.gob.mx/
 
@@ -69,6 +69,7 @@ sections:
 
   - name: Tablero de Entregas
     url: http://monitoreo.conabio.gob.mx/snmb_charts/
+    embed: true
 
 - menu: true
   embed: true
