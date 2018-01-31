@@ -40,6 +40,7 @@ orgs:
 sections:
 - menu: true
   embed: true
+  section: true
   name: Geoportal
   img: 1_geoportal.png
   title: Productos espaciales
@@ -51,6 +52,32 @@ sections:
 
 - menu: true
   embed: true
+  name: MAD-Mex
+  url: http://madmex.conabio.gob.mx/
+
+- menu: true
+  embed: true
+  name: SNMB
+  url: http://www.biodiversidad.gob.mx/sistema_monitoreo/
+
+  children:
+  - name: Registros
+    url: http://snmb.conabio.gob.mx/observations?place_id=140
+
+  - name: Enciclovida
+    url: http://www.enciclovida.mx/
+
+  - name: Tablero de Entregas
+    url: http://monitoreo.conabio.gob.mx/snmb_charts/
+
+- menu: true
+  embed: true
+  name: Indicadores
+  url: http://monitoreo.conabio.gob.mx/indicadores/
+
+- menu: false
+  embed: true
+  section: true
   name: Estadísticas
   title: Estadísticas nacionales
   img: 3_infografias_videos.png
@@ -60,8 +87,9 @@ sections:
     de los ecosistemas mexicanos, a distintos niveles de agregación:
     nacional, por estado, en áreas naturales protegidas, etc.
 
-- menu: true
+- menu: false
   embed: true
+  section: true
   name: Dashboard
   title: Dashboard datos
   img: 6_dashboard_snmb.png
@@ -70,24 +98,27 @@ sections:
     Podrás consultar y descargar infografías y videos sobre la información generada
     en los proyectos asociados a este portal.
 
-- menu: true
+- menu: false
   name: Registros
+  section: true
   title: Registros de especies
   img: 4_registros_de_especies.png
   url: http://snmb.conabio.gob.mx/observations
   description: |
     Podrás hacer consultas espaciales y taxonómicas sobre fauna presente en méxico.
 
-- menu: true
+- menu: false
   name: Enciclovida
+  section: true
   title: Enciclovida
   img: 5_especies_mexicanas.png
   url: http://www.enciclovida.mx/
   description: |
     Podrás consultar información biológica sobre especies de tu elección.
 
-- menu: true
+- menu: false
   embed: true
+  section: true
   name: Materiales
   title: Materiales y recursos
   img: 2_estadisticas_nacionales.png
