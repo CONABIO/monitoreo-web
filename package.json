@@ -57,18 +57,18 @@
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
-    "buble": "^0.15.2",
-    "less": "^2.7.2",
+    "buble": "^0.19.3",
+    "less": "^3.0.2",
     "less-plugin-autoprefix": "^1.5.1",
     "node-sass": "^4.5.3",
     "pug": "^2.0.0-rc.1",
-    "rollup": "^0.41.6",
-    "talavera": "^0.4.0",
-    "tarima": "^3.6.1"
+    "rollup": "^0.58.2",
+    "talavera": "^0.5.0",
+    "tarima": "^4.0.7"
   },
   "optionalDependencies": {
-    "chokidar": "^1.7.0",
+    "chokidar": "^2.0.3",
     "node-notifier": "^5.1.2",
-    "tarima-lr": "^0.3.2"
+    "tarima-lr": "^0.4.1"
   }
 }
